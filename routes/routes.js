@@ -1,11 +1,13 @@
 var express = require("express");
-var burger = require("../models/burger.js");
+var db = require("../models");
 
 var router = express.Router();
 
 
-
-// routes
+router.get("/", function(req, res){
+    console.log("home page launched");
+    res.render("index");
+})
 
 
 
