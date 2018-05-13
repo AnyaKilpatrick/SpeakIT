@@ -1,11 +1,26 @@
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Login Page</title>
-</head>
-<body>
-  
-</body>
-</html>
+{{!-- speakIt banner art --}}
+<img src="/public/images/speakItBanner.png" alt="SpeakIt Banner" class="center"> 
+
+{{!-- nav bar --}}
+
+{{!-- Login form --}}
+<div class="row">
+  <form class="col s12">
+    <div class="row">
+      <div class="input-field col s6">
+        <input userName="userName" id="userName" type="text" class="validate">
+        <label for="userName">User Name</label>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="password" type="password" class="validate">
+          <label for="password">Password</label>
+        </div>
+
+{{!-- materialize large button Sign up submit button w/Anya's code--}}
+  <button id="logInBtn"><a href="/login">log in <i class="waves-effect waves-light btn-large">
+      <i class="material-icons right red accent-4" id="logInUser">cloud</i>button</a></button>
+
+{{!-- materialize large button Sign up submit button--}}
+<a class="waves-effect waves-light btn-large">
+  <i class="material-icons right red accent-4" id="logInUser">cloud</i>button</a>
