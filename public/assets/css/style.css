@@ -13,3 +13,8 @@ body {
   text-align: horizontal;
 }
 
+#profile{
+	padding-top: 75px;
+	opacity: 0.5;
+}
+
