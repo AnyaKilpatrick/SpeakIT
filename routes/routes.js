@@ -6,6 +6,9 @@ var router = express.Router();
 // home page
 router.get("/", function(req, res){
     console.log("home page launched");
+    db.User.findAll({}).then(function(data){
+        console.log(data);
+    })
     res.render("index");
 })
 // log in page
@@ -32,6 +35,15 @@ router.post("/newprofile", function(req, res){
     }).then(function(){
         console.log("new use was added successfully");
         res.status(200).end();
+    })
+});
+
+//Post (new connection)
+router.post("/language/:id", function(req, res){
+    db.Connection.create({
+        //need to pass data taken from the language.handlebars page (id of user currently logged in and id of user in div that the current user selects and pass it to the Connection model here
+    }).then(function(){
+        console.log("new connection established")
     })
 });
 module.exports = router;
