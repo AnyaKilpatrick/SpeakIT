@@ -18,6 +18,7 @@ module.exports = function(app){
         })
         res.render("index");
     })
+
     // log in page
     app.get("/login", function(req, res){
         res.render("login", { message: req.flash('loginMessage') });
@@ -82,7 +83,9 @@ module.exports = function(app){
     //         res.status(200).end();
     //     })
     // })
-
+    app.get("/language", function(req, res){
+        res.render("language");
+    })
     //Post (new connection)
     app.post("/language/:id", function(req, res){
         db.Connection.create({
@@ -114,6 +117,8 @@ module.exports = function(app){
         console.log("you are not authenticated");
         res.redirect('/');
     }
+
+
 }
 
 // module.exports = router;
