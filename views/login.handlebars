@@ -1,26 +1,18 @@
-{{!-- speakIt banner art --}}
-<img src="/public/images/speakItBanner.png" alt="SpeakIt Banner" class="center"> 
-
-{{!-- nav bar --}}
-
-{{!-- Login form --}}
+<!--speakIt banner art -->
+<img src="/assets/images/speakItBanner.png" alt="SpeakIt Banner" class="center">
+<!--nav bar Login form -->
 <div class="row">
-  <form class="col s12">
+  <form action="/login" method="post" class="col s12">
     <div class="row">
-      <div class="input-field col s6">
-        <input userName="userName" id="userName" type="text" class="validate">
-        <label for="userName">User Name</label>
+      <div class="input-field col s6" >
+        <input userName="userName" id="userName" name="username" type="text" class="validate">
+        <label class="pink-text text-accent -3"for="userName">User Name</label>
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <input id="password" type="password" class="validate">
-          <label for="password">Password</label>
+          <input id="password" type="password" name="password" class="validate">
+          <label class="pink-text text-accent -3" for="password">Password</label>
         </div>
-
-{{!-- materialize large button Sign up submit button w/Anya's code--}}
-  <button id="logInBtn"><a href="/login">log in <i class="waves-effect waves-light btn-large">
-      <i class="material-icons right red accent-4" id="logInUser">cloud</i>button</a></button>
-
-{{!-- materialize large button Sign up submit button--}}
-<a class="waves-effect waves-light btn-large">
-  <i class="material-icons right red accent-4" id="logInUser">cloud</i>button</a>
+    <!--materialize large button Sign up submit button-->
+    <button id="logInUser" class="waves-effect waves-light btn-large pink accent -3">Login</button>
+</form>

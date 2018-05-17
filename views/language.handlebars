@@ -4,7 +4,7 @@
     <!--Logo-->
         <div class="container">
             <div class="col m8 offset-2 ">
-            <span><img src="speakitLogo.png" class= "center-align"></img></span>
+            <span><img src="/assets/images/speakitLogo.png" class= "center-align"></img></span>
             </div>   
         </div>  
 
@@ -24,18 +24,18 @@
 <main>
 
 <!--this is the card that will display the results of the users that speak a certain language-->
-    <div class="card grey darken-1 z-depth-2 hoverable">
+<div class="card grey darken-1 z-depth-2 hoverable">
     <div class="card-image waves-effect waves-block waves-light">
       <img class="activator" src="">
     </div>
     <div class="card-content white-text" id="resultsCard">
-      <span class="card-title activator white-text"><!--Username-->{{}}<i class="material-icons right pink-text text-accent-3">more_vert</i></span>
-      {{#each}}<p><!--User language-->{{}}</p>{{/#each}}
+      <span class="card-title activator white-text">title<i class="material-icons right pink-text text-accent-3">more_vert</i></span>
+      <p><!--User language--></p>
       <a class="btn-floating btn-large waves-effect waves pink accent-3" id="addBtn"><i class="material-icons right">add</i></a>
     </div>
     <div class="card-reveal grey lighten-1">
-      <span class="card-title grey-text text-darken-4"><!--Username-->{{}}<i class="material-icons right pink-text text-accent-3">close</i></span>
-     {{#each}} <p><!--The "about me" information of the user.-->{{}}</p>{{/#each}}
+      <span class="card-title grey-text text-darken-4"><!--Username--><i class="material-icons right pink-text text-accent-3">close</i></span>
+     <p><!--The "about me" information of the user.--></p>
     </div>
     
   </div>
