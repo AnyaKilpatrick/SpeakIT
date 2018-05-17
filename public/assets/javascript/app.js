@@ -2,6 +2,10 @@
 
 var newUser
 
+$(".login").on("click", function (event) {
+  event.preventDefault();
+  // enter_text jquery string #enter_text.val()
+
 $(".submit").on("click", function (event) {
   event.preventDefault();
   // enter_text jquery string #enter_text.val()
