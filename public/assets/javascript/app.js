@@ -1,17 +1,3 @@
-// Log in event
-
-var newUser
-
-$(".submit").on("click", function (event) {
-  event.preventDefault();
-  // enter_text jquery string #enter_text.val()
-
-  $.post("/api/", newUserForm,
-    function (data) {
-      // posting data to an endpoint
-    });
-});
-
 // materialize date picker for age on user sign up
 // document.addEventListener('DOMContentLoaded', function () {
 //   var elems = document.querySelectorAll('.datepicker');
