@@ -1,6 +1,4 @@
-body {
-  background-color: black;
-}
+
 
 .center {
     display: block;
@@ -13,3 +11,27 @@ body {
   text-align: horizontal;
 }
 
+body{
+ 	background-color: #bdbdbd;
+ }
+
+#profile.container{
+	padding-top: 75px;
+	opacity: ;
+	border-radius: 25px;
+}
+
+#resultsCard{
+	position: relative;
+}
+
+#addBtn{
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+}
+
+.proCard{
+	border-radius: 25px;
+	padding-right: 20px;
+}
