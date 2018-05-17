@@ -1,30 +1,27 @@
-//still need to update the .hasMany in user.js to make this work correctly
+
 
 module.exports = function(sequelize, DataTypes) {
     var Connection = sequelize.define("Connection", {
-      requestor: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        validate: {
-          len: [5, 15]
-        }
-      },
+    //   requestor: {
+    //     //obtain this from the user who is logged in
+    //     type: DataTypes.INTEGER,
+    //     allowNull: false
+        
+    //   },
       requestee: {
-        type: DataTypes.STRING,
+        //obtain this from the div where the user is displayed
+        type: DataTypes.INTEGER,
         allowNull: false,
-        validate: {
-            len: [5, 15]
-          }
       }
     });
   
-    Connection.associate = function(models) {
-      Connection.belongsTo(models.User, {
-        foreignKey: {
-          allowNull: false
-        }
-      });
-    };
+    // Connection.associate = function(models) {
+    //   Connection.belongsTo(models.User, {
+    //     foreignKey: {
+    //       allowNull: false
+    //     }
+    //   });
+    // };
   
     return Connection;
   };
