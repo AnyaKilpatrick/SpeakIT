@@ -3,9 +3,9 @@
 <img src="public/assets/images/speakItBanner.png" alt="SpeakIt Banner" class="center">
 
 <!--nav bar Signup Form-->
-<form>
+<form action="/signup" method="post">
   <div class="row">
-    <form class="col s12">
+    <div class="col s12">
       <div class="row">
         <div class="input-field col s6" "newUserForm">
           <input userName="userName" id="newUserName" type="text" class="validate">
@@ -62,7 +62,6 @@
             <input id="newUserGender" type="gender" class="validate">
             <label class="pink-text text-accent -3" for="gender">Gender</label>
             <!--materialize radio buttons vertical -->
-            <form action="#">
               <p>
                 <label>
                   <input class="horizontal" name="group1" type="radio" />
@@ -81,11 +80,9 @@
                   <span>Other</span>
                 </label>
               </p>
-            </form>
           </div>
         </div>
       </div>
-
       <input type="text" class="datepicker">
       <div class="row">
         <div class="input-field col s12" "newUserForm">
@@ -96,6 +93,3 @@
       <a href="/login" id="logInUser" class="waves-effect waves-light btn-large pink accent -3">Submit</a>
     </form>
   </div>
-  </body>
-
-  </html>
