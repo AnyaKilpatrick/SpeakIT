@@ -134,8 +134,6 @@ module.exports = function(app){
         console.log("you are not authenticated");
         res.redirect('/');
     }
-
-
 }
 
 // module.exports = router;
