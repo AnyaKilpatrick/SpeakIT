@@ -21,6 +21,29 @@ module.exports = function(sequelize, DataTypes) {
                 notContains: " ", // don't allow empty space,
                 len: [5,10]
             }
+        },
+        gender: {
+            type: DataTypes.STRING,
+            allowNull: true,
+            validate: {
+                isAlphanumeric: true, // will only allow alphanumeric characters, so "_abc" will fail
+                notContains: " ", // don't allow empty space,
+            }
+        },
+        age: {
+            type: DataTypes.INTEGER,
+            allowNull: true,
+        },
+        language: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        about: {
+            type: DataTypes.TEXT,
+            allowNull: true,
+            validate: {
+                len: [10,200]
+            }
         }
     })
     // // methods
