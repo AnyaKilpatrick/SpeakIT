@@ -40,3 +40,18 @@ body{
 	padding-right: 20px;
 }
 
+.wrapper {
+    text-align: center;
+}
+
+.button {
+    position: absolute;
+    top: 50%;
+}
+
+.flags{
+	height: 10px;
+	width: 10px;
+	border-radius: 50%;
+}
+
