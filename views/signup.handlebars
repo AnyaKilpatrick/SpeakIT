@@ -47,7 +47,7 @@
             {{!-- container for info --}}
             <div class="row">
               <div class="input-field col s6" "newUserForm">
-                <input id="newUserLanguage" type="text" class="validate">
+                <input name="language" id="newUserLanguage" type="text" class="validate">
                 <label class="pink-text text-accent -3" for="nativeLanguage">Native Language</label>
                 <!-- materialize Dropdown Trigger -->
                 <a class="dropdown-trigger btn pink accent -3" href='#' data-target='dropdown1'>Choose one</a>
@@ -78,14 +78,14 @@
             </div>
             <div class="row">
               <div class="input-field col s12" "newUserForm">
-                <input id="newUserAge" type="age" class="validate">
+                <input name="age" id="newUserAge" type="age" class="validate">
                 <label class="pink-text text-accent -3" for="age">Age</label>
               </div>
             </div>
             <div class="row">
               <div class="col s12" "newUserForm">
                 <div class="gender">
-                  <input id="newUserGender" type="gender" class="validate">
+                  <input name="gender" id="newUserGender" type="gender" class="validate">
                   <label class="pink-text text-accent -3" for="gender">Gender</label>
                   <!--materialize radio buttons vertical -->
                   <p>
@@ -112,10 +112,10 @@
             <input type="text" class="datepicker">
             <div class="row">
               <div class="input-field col s12" "newUserForm">
-                <input id="newUserAbout" type="aboutMe" class="validate">
+                <input name="about" id="newUserAbout" type="aboutMe" class="validate">
                 <label class="pink-text text-accent -3" for="aboutMe">About Me</label>
               </div>
             </div>
             <button id="logInUser" class="waves-effect waves-light btn-large pink accent -3">Submit</button>
       </form>
-      </div>
+     </div>
