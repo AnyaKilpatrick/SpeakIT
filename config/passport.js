@@ -40,45 +40,37 @@ module.exports = function(passport) {
         passReqToCallback : true // allows us to pass back the entire request to the callback
     },
     function(req, username, password, done) {
-
+        console.log("...................."+JSON.stringify(req.body));
         // asynchronous
         // User.findOne wont fire unless data is sent back
-        process.nextTick(function() {
+        //process.nextTick(function() {
             console.log("Authenticate!!!!!!!!!!!!!!!");
         // find a user whose email is the same as the forms email
         // we are checking to see if the user trying to login already exists
         db.User.findOne({where: { "username" :  username }}).then(function(result) {
 
             // check to see if theres already a user with that email
-            if (result === "null") {
+            if (result) {
                 return done(null, false, req.flash('signupMessage', 'That username is already taken.'));
             } else {
 
                 // if there is no user with that username
                 // create the user
-                var Model = db.User;
-                var newUser = new Model();
-                console.log("Authenticate222!!!!!!!!!!!!!!!");
-                // set the user's local credentials
-                newUser.username = username;
-                newUser.password = password;
-                // newUser.gender = gender;
-                // newUser.age = age;
-                // newUser.language = language;
-                // newUser.about = about;
-                // newUser.password = newUser.generateHash(password);
-
-                // save the user
-                newUser.save(function(err) {
-                    if (err)
-                        throw err;
-                    return done(null, newUser);
+                db.User.create({
+                    username: username,
+                    password: password,
+                    gender: req.body.gender,
+                    age: req.body.age,
+                    about: req.body.about,
+                    language: req.body.language,
+                }).then(function(user) {
+                    return done(null, user);
                 });
             }
 
         });    
 
-        });
+        //});
 
     }));
 
