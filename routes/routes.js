@@ -99,7 +99,8 @@ module.exports = function(app){
     // we will want profile protected so you have to be logged in to visit
     // we will use route middleware to verify this (the isLoggedIn function)
     app.get("/profile", isLoggedIn, function(req, res) {
-        console.log("readu to go to profile...!!")
+        console.log("readu to go to profile...!!");
+        console.log("req.user "+req.user.username + req.user.password);
         res.render("profile");
     });
     app.get('/logout', function(req, res) {
