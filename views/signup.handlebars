@@ -1,6 +1,31 @@
 {{!-- speakIt banner art --}}
+<header>
+  <!--Logo-->
+  <div class="container">
+    <div class="col m8 offset-2 ">
+      <span>
+        <img src="assets/images/speakitv2.png" class="center-align"></img>
+      </span>
+    </div>
+  </div>
+
+  <!--navigation bar-->
+  <nav>
+    <div class="nav-wrapper grey darken-1">
+      <a href="#!" class="brand-logo center"></a>
+      <ul class="left hide-on-med-and-down">
+        <li>
+          <a href="/">Home</a>
+        </li>
+        <li>
+          <a href="">Profile</a>
+        </li>
+
+      </ul>
+    </div>
+  </nav>
+</header>
 <!--speakIt banner art-->
-<img src="public/assets/images/speakItBanner.png" alt="SpeakIt Banner" class="center">
 
 <!--nav bar Signup Form-->
 <form action="/signup" method="post">
@@ -8,7 +33,7 @@
     <div class="col s12">
       <div class="row">
         <div class="input-field col s6" "newUserForm">
-          <input userName="userName" id="newUserName" type="text" class="validate">
+          <input name="username" userName="userName" id="newUserName" type="text" class="validate">
           <label class="pink-text text-accent -3" for="userName">User Name</label>
         </div>
         <div class="input-field col s6" "newUserForm">
@@ -22,19 +47,19 @@
           <ul id='dropdown1' class='dropdown-content'>
             <li>
               <a href="#!">
-                <img src="public/assets/images/flag-of-France.png"></img>France</a>
+                <img src="assets/images/flag-of-France.png"></img>France</a>
             </li>
             <li>
               <a href="#!">
-                <img src="public/assets/images/flag-of-Germany.png"></img>Germany</a>
+                <img src="assets/images/flag-of-Germany.png"></img>Germany</a>
             </li>
             <li>
               <a href="#!">
-                <img src="public/assets/images/flag-of-Spain.png"></img>Spain</a>
+                <img src="assets/images/flag-of-Spain.png"></img>Spain</a>
             </li>
             <li>
               <a href="#!">
-                <img src="public/assets/images/flag-of-United-Kingdom.png"></img>United Kingdom</a>
+                <img src="assets/images/flag-of-United-Kingdom.png"></img>United Kingdom</a>
             </li>
             <li>
               <a href="#!">
@@ -46,7 +71,7 @@
       </div>
       <div class="row">
         <div class="input-field col s12" "newUserForm">
-          <input id="newUserPassword" type="password" class="validate">
+          <input name="password" id="newUserPassword" type="password" class="validate">
           <label class="pink-text text-accent -3" for="password">Password</label>
         </div>
       </div>

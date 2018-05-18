@@ -40,10 +40,26 @@ module.exports = function(app){
     })
 
     app.post("/signup", passport.authenticate("local-signup", {
-        successRedirect : "/profile", // redirect to the secure profile section
+        successRedirect : "/signup2", // redirect to the secure profile section
         failureRedirect : "/signup", // redirect back to the signup page if there is an error
         // failureFlash : true // allow flash messages
     }));
+
+    app.get("/signup2", function(req, res){
+        res.render("signup2");
+    })
+
+    app.put("/signup2", function(req, res){
+        db.User.update({
+            language: req.body.language,
+            gender: req.body.gender,
+            age: req.body.age,
+            about: req.body.about
+            //need to pass data taken from the language.handlebars page (id of user currently logged in and id of user in div that the current user selects and pass it to the Connection model here
+        }).then(function(){
+            console.log("user completely updated")
+        })
+    });
 
     // app.post("/newprofile", function(req, res){    
     //     console.log(req.body);
