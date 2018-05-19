@@ -1,60 +1,64 @@
 
-
-    <!--handlbars still need to be added-->
-    
-    <header>
-        <div class="container">
-            <div class="col m8  offset-2">
-            <span><img src="speakitLogo.png" class= "center-align"></img></span>
-            </div>   
-        </div>
-
-        <!--Navigation Bar-->    
-        <nav>
-            <div class="nav-wrapper grey darken-1">
-                <a href="#!" class="brand-logo center"></a>
-                <ul class="left hide-on-med-and-down">
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Profile</a></li>
-                    
-                </ul>
-            </div>
-        </nav>
-    </header>
-
-     <div  class="container ">
-    <div class="section">
-
-      <!--   Icon Section   -->
-      <div class="row">
-        <div class="col s12 m4 ">
-          <div class="icon-block proCard grey darken-1 z-depth-4">
-            <h2 class="center pink-text text-accent-3"><i class="medium material-icons">person</i></h2>
-            <h5 class="center white-text">About Me</h5>
-
-            <p class="light white-text center-align">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis obcaecati veniam labore quos, quam modi molestias omnis non. Consectetur accusamus incidunt repudiandae possimus dignissimos veritatis voluptatum odit amet iure hic.</p>
-          </div>
-        </div>
-
-        <div class="col s12 m4 ">
-          <div class="icon-block proCard grey darken-1 z-depth-4">
-            <h2 class="center pink-text text-accent-3"><i class="medium material-icons">record_voice_over</i></h2>
-            <h5 class="center white-text">Native Language</h5>
-
-            <p class="light white-text center-align">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit fuga quibusdam facere vel esse quo quisquam, quaerat iste mollitia, ducimus, dignissimos impedit, ipsa vitae asperiores enim alias veniam! Officiis, maiores.</p>
-          </div>
-        </div>
-
-        <div class="col s12 m4">
-          <div class="icon-block  proCard grey darken-1 z-depth-4">
-            <h2 class="center pink-text text-accent-3"><i class="medium material-icons">group</i></h2>
-            <h5 class="center white-text">Friends</h5>
-
-            <p class="light white-text center-align">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis reprehenderit modi debitis eaque! Exercitationem eum quaerat eligendi cum beatae iure repudiandae totam tempore reprehenderit corrupti dicta tempora, mollitia alias nesciunt.</p>
-          </div>
-        </div>
+  <header>
+    <div class="container">
+      <div class="col m8 offset-2">
+        <span><img class="center-align" src=""></span>
       </div>
-    
-        </div>    
+    </div><!--Navigation Bar-->
+    <nav>
+      <div class="nav-wrapper sidenav-trigger grey darken-1">
+        <a class="brand-logo center" href="#!"></a>
+        <ul class="left sidenav">
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/profile">Profile</a>
+          </li>
+        </ul>
+     
+      </div>
+    </nav>
+  </header>
+  
+    <div class="section">
+      <div class="container flow-text proCard light white-text center-align grey darken-1 z-depth-4">
+        <!--profile area-->
+        <main>
+          <div class="row">
+            <div class="col m10 offset-1" style="width:100% ">
+              <br>
+              <img class="circle proPic left-align" src="assets/images/flag-of-France.png">
+              <h3 id="addFont" class="addFont">John Doe</h3>
+              <br>
+              <br>
+              <h5>Language</h5>
+              <p class="flow-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde odit aperiam tempora quae saepe dolorum ratione vero minima eos culpa, est maiores, eum laudantium quam? Beatae voluptates nemo repudiandae, enim.</p>
+              <h5>My Story</h5>
+              <p class="flow-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus veniam, corporis dicta ipsam vitae dolorem excepturi dolorum sunt unde maiores, qui cumque, culpa obcaecati non ab. Saepe perferendis totam facilis!</p>
+              <h5>My Friends</h5>
+              <ul class="flow-text">
+                <li>Anya</li>
+                <li>Johnny</li>
+                <li>Mariea</li>
+              </ul>
+<!--search button-->
+              
+            </div>
+          </div>
+        </main>
+
+
+
+        <!--This is a footer ;)-->
+       
+
+
+         <input id="languagechoice" type="text" class="validate">
+         <button type="button" id="languagebtn" href="language">Select Language</button>
+
         
- 
+      </div>
+    </div>
+  </div>
+  <script>$('#drop').dropdown();</script>

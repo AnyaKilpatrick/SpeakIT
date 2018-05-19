@@ -1,3 +1,26 @@
+$("#languagebtn").on("click", function(event){
+    // event.preventDefault();
+    console.log("working")
+    var lang = {
+        language: $("#languagechoice").val().trim()
+    }
+    $.ajax("/languagesearch", {
+        type: "POST",
+        data: lang
+    }).then(function(language){
+        console.log("Test1"+language);
+        window.location.replace("/language")
+    })
+})
+
+
+// $.ajax("/signup", {
+//     type: "PUT",
+//     data:newUser
+// }).then(function(){
+//     console.log("sent new user ajax object");
+// })
+
 // $("#signUpUser").on("click", function(event){
 //     event.preventDefault();
 //     console.log("sign up btn was clicked");
