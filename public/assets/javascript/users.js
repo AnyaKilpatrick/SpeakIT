@@ -1,3 +1,23 @@
+$("#languagebtn").on("click", function(event){
+    var lang = {
+        language: $("#languagechoice").val().trim()
+    }
+    $.ajax("/languagesearch", {
+        type: "POST",
+        data: lang
+    }).then(function(){
+        console.log(language);
+    })
+})
+
+
+$.ajax("/signup", {
+    type: "PUT",
+    data:newUser
+}).then(function(){
+    console.log("sent new user ajax object");
+})
+
 // $("#signUpUser").on("click", function(event){
 //     event.preventDefault();
 //     console.log("sign up btn was clicked");
