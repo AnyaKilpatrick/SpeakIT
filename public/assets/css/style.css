@@ -38,6 +38,10 @@ body{
 .proCard{
 	border-radius: 25px;
 	padding-right: 20px;
+	border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-color: #f50057
+
 }
 
 .wrapper {
@@ -49,6 +53,54 @@ body{
     top: 50%;
 }
 
-#sign2 {
-    border-radius: 25px;
+.flags{
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
 }
+
+.proPic{
+	height: 100px;
+	width: 100px;
+
+}
+
+ .upTop{
+	margin-bottom: 25px;
+    border-style: solid;
+    border-bottom: thin  #f50057;
+}
+
+/*This plays the video over the background of the entire page */
+video#speakItVid{ 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    /* background: url(polina.jpg) no-repeat; */
+    /* background-size: cover;  */
+    opacity: ;
+}
+
+#addFont{
+	text-decoration: underline;
+	font-family:'Love Ya Like A Sister', Cursive;
+	color: #212121;
+}
+
+h5{
+	text-decoration: underline;
+	
+
+}
+
+
+/*font-family: 'Pacifico', cursive;

@@ -30,92 +30,91 @@
 <!--nav bar Signup Form-->
 <div class="container" id="sign2">
   <div class="row">
-    <div class="col s12 m8 l8 offset-2 z-depth-4">
-      <form action="/signup" method="post">
-        <div class="row">
-          <div class="col s6">
-            <div class="row">
-              <div class="input-field col s6" "newUserForm">
-                <input name="username" userName="userName" id="newUserName" type="text" class="validate">
-                <label class="pink-text text-accent -3" for="userName">User Name</label>
-              </div>
-              <div class="input-field col s6" "newUserForm">
-                <input name="password" id="newUserPassword" type="password" class="validate">
-                <label class="pink-text text-accent -3" for="password">Password</label>
-              </div>
-            </div>
-            {{!-- container for info --}}
-            <div class="row">
-              <div class="input-field col s6" "newUserForm">
-                <input name="language" id="newUserLanguage" type="text" class="validate">
-                <label class="pink-text text-accent -3" for="nativeLanguage">Native Language</label>
-                <!-- materialize Dropdown Trigger -->
-                <a class="dropdown-trigger btn pink accent -3" href='#' data-target='dropdown1'>Choose one</a>
-                <!-- materialize Dropdown Structure -->
-                <ul id='dropdown1' class='dropdown-content'>
-                  <li>
-                    <a href="#!">
-                      <img src="assets/images/flag-of-France.png"></img>France</a>
-                  </li>
-                  <li>
-                    <a href="#!">
-                      <img src="assets/images/flag-of-Germany.png"></img>Germany</a>
-                  </li>
-                  <li>
-                    <a href="#!">
-                      <img src="assets/images/flag-of-Spain.png"></img>Spain</a>
-                  </li>
-                  <li>
-                    <a href="#!">
-                      <img src="assets/images/flag-of-United-Kingdom.png"></img>United Kingdom</a>
-                  </li>
-                  <li>
-                    <a href="#!">
-                      <i class="material-icons"></i>United States</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="row">
-              <div class="input-field col s12" "newUserForm">
-                <input name="age" id="newUserAge" type="age" class="validate">
-                <label class="pink-text text-accent -3" for="age">Age</label>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col s12" "newUserForm">
-                <div class="gender">
-                  <input name="gender" id="newUserGender" type="gender" class="validate">
-                  <label class="pink-text text-accent -3" for="gender">Gender</label>
-                  <!--materialize radio buttons vertical -->
-                  <p>
-                    <label>
-                      <input class="horizontal" name="group1" type="radio" />
-                      <span>Male</span>
-                    </label>
-                  </p>
-                  <p>
-                    <label>
-                      <input class="horizontal" name="group1" type="radio" />
-                      <span>Female</span>
-                    </label>
-                  </p>
-                  <p>
-                    <label>
-                      <input class="horizontal" name="group1" type="radio" />
-                      <span>Other</span>
-                    </label>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <input type="text" class="datepicker">
-            <div class="row">
-              <div class="input-field col s12" "newUserForm">
-                <input name="about" id="newUserAbout" type="aboutMe" class="validate">
-                <label class="pink-text text-accent -3" for="aboutMe">About Me</label>
-              </div>
-            </div>
-            <button id="logInUser" class="waves-effect waves-light btn-large pink accent -3">Submit</button>
-      </form>
-     </div>
+    <div class="col s12">
+      <div class="row">
+        <div class="input-field col s6" "newUserForm">
+          <input  name= "username" userName="userName" id="newUserName" type="text" class="validate">
+          <label class="pink-text text-accent -3" for="userName">User Name</label>
+        </div>
+        <div class="input-field col s6" "newUserForm">
+          <input id="newUserLanguage" type="text" class="validate">
+          <label class="pink-text text-accent -3" for="nativeLanguage">Native Language</label>
+
+          <!-- materialize Dropdown Trigger -->
+          <a class="dropdown-trigger btn pink accent -3" href='#' data-target='dropdown1'>Choose one</a>
+
+          <!-- materialize Dropdown Structure -->
+          <ul id='dropdown1' class='dropdown-content'>
+            <li>
+              <a href="#!">
+                <img src="public/assets/images/flag-of-France.png"></img>France</a>
+            </li>
+            <li>
+              <a href="#!">
+                <img src="public/assets/images/flag-of-Germany.png"></img>Germany</a>
+            </li>
+            <li>
+              <a href="#!">
+                <img src="public/assets/images/flag-of-Spain.png"></img>Spain</a>
+            </li>
+            <li>
+              <a href="#!">
+                <img src="public/assets/images/flag-of-United-Kingdom.png"></img>United Kingdom</a>
+            </li>
+            <li>
+              <a href="#!">
+                <i class="material-icons"></i>United States</a>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12" "newUserForm">
+          <input name="password" id="newUserPassword" type="password" class="validate">
+          <label class="pink-text text-accent -3" for="password">Password</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12" "newUserForm">
+          <input id="newUserAge" type="age" class="validate">
+          <label class="pink-text text-accent -3" for="age">Age</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12" "newUserForm">
+          <div class="gender">
+            <input id="newUserGender" type="gender" class="validate">
+            <label class="pink-text text-accent -3" for="gender">Gender</label>
+            <!--materialize radio buttons vertical -->
+              <p>
+                <label>
+                  <input class="horizontal" name="group1" type="radio" />
+                  <span>Male</span>
+                </label>
+              </p>
+              <p>
+                <label>
+                  <input class="horizontal" name="group1" type="radio" />
+                  <span>Female</span>
+                </label>
+              </p>
+              <p>
+                <label>
+                  <input class="horizontal" name="group1" type="radio" />
+                  <span>Other</span>
+                </label>
+              </p>
+          </div>
+        </div>
+      </div>
+      <input type="text" class="datepicker">
+      <div class="row">
+        <div class="input-field col s12" "newUserForm">
+          <input id="newUserAbout" type="aboutMe" class="validate">
+          <label class="pink-text text-accent -3" for="aboutMe">About Me</label>
+        </div>
+      </div>
+      <button id="logInUser" class="waves-effect waves-light btn-large pink accent -3">Submit</button>
+    </form>
+  </div>
