@@ -4,8 +4,15 @@
 //   var instances = M.Datepicker.init(elems, options);
 // });
 
-// materialize dropdown for choosing flag of native language
-$('.dropdown-trigger').dropdown();
+// Or with jQuery
 
-// array of flag art to replace user input of native language choice
-// for loop to loop through array of flag options
+// $(document).ready(function () {
+//   $('.datepicker').datepicker();
+// });
+
+// materialize dropdown for choosing flag of native language
+$('.dropdown-trigger').on("click", function(){
+  console.log("I am clicking");
+  $(this).dropdown();
+});
+console.log("sanity")
