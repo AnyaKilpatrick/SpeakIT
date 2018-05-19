@@ -47,3 +47,16 @@ db.sequelize.sync({ force: false }).then(function() {
       console.log("App listening on PORT " + PORT);
     });
 });
+
+
+
+
+
+// var http = require('http').Server(app);
+// var io = require('socket.io')(http);
+// io.on('connection', function(socket){
+//     console.log('a user connected!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
+//     socket.on('chat message', function(msg){
+//       io.emit('chat message', msg);
+//     });
+//   });
