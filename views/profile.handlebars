@@ -20,8 +20,45 @@
       </div>
     </nav>
   </header>
-  
-    <div class="section">
+  <div class="container" id="profileContent">  
+    <div class="row">
+      <div class="col s12 center">
+        <img class="circle proPic left-align" src="assets/images/flag-of-France.png">
+        <h3 id="addFont" class="addFont">John Doe</h3>
+      </div>
+      <div class="col s12 center">
+        <ul id = "dropdown" class = "dropdown-content">
+          <li><a href = "/language">English</li>
+          <li><a href = "/language">German</li>
+          <li><a href = "/language">Spanish</a></li>
+        </ul>
+        <a class = "btn dropdown-button" href = "#" data-activates = "dropdown" id="languagechoice">Search friends</a>
+      </div>
+      <div class="col s12 m5 l4 addTopMargin" id="aboutMeDiv">
+        <div class="row center">
+          <h5>About Me</h5>
+        </div>
+        <p class="flow-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde odit aperiam tempora quae saepe dolorum ratione vero minima eos culpa, est maiores, eum laudantium quam? Beatae voluptates nemo repudiandae, enim.</p>
+      </div>
+      <div class="col s12 m5 l4 offset-l4 offset-m2 addTopMargin" id="aboutMeDiv">
+        <div class="row center">
+          <h5>My Friends</h5>
+        </div>
+        <ul>
+          <li>
+            <a href="/chat">chat</a> with AnyaUA
+            <img class="circle" width="50px" src="assets/images/flag-of-Ukraine.png">
+          </li>
+          <li>
+            <a href="/chat">chat</a> with Jan-Michael
+            <img class="circle" width="50px" src="assets/images/flag-of-United-States-of-America.png">
+          </li>
+        </ul>
+      </div>
+
+    </div>
+    </div>
+    {{!-- <div class="section">
       <div class="container flow-text proCard light white-text center-align grey darken-1 z-depth-4">
         <!--profile area-->
         <main>
@@ -60,5 +97,5 @@
         
       </div>
     </div>
-  </div>
-  <script>$('#drop').dropdown();</script>
+  </div> --}}
+  <script>$('#dropdown-button').dropdown();</script>
