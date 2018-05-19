@@ -87,13 +87,20 @@ module.exports = function(app){
     // })
     //grabs the language value from the profile page and saves it to the language global variable
     app.post("/languagesearch", function(req, res){
-        console.log(req.body.language)
-        language = req.body.language
+        console.log("Test2"+req.body.language);
+        language = req.body.language;
         // console.log(JSON.stringify(object))
         // res.render("language", object);
+        res.redirect("language");
     })
+    
+
+    // app.get("/languagechoice/:language", function(req, res){
+    //     language = req.params.language;
+    //     db.User 
+    // })
     //will return values to the users in the database that match the language search critera; need to merge this with the languagesearch post route
-    app.get("/language", function(req, res){
+    app.get("/language", isLoggedIn, function(req, res){
         db.User.findAll({
             where: {language: language}
         }).then(function(results){
