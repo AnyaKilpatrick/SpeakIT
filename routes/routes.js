@@ -108,9 +108,8 @@ module.exports = function(app){
                 users: results
             }
             res.render("language", object);
-            console.log(JSON.stringify(object.users))
+            console.log("this is the result!!"+JSON.stringify(object.users))
         })
-        res.render("language");
     })
 
 
