@@ -45,7 +45,7 @@ require('./routes/routes.js')(app, passport); // load our routes and pass in our
 // var server = require('http').Server(app);
 
 db.sequelize.sync({ force: false }).then(function() {
-    server.listen(PORT, function() {
+    app.listen(PORT, function() {
       console.log("App listening on PORT " + PORT);
     });
 });
