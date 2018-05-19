@@ -1,3 +1,8 @@
+<video playsinline autoplay muted loop poster="fist.jpg" id="speakItVid">
+  <source src="assets/images/speakItVid.mp4" type="video/webm">
+  <source src="assets/images/speakItVid.mp4" type="video/mp4">
+</video>
+
 {{!-- speakIt banner art --}}
 <header>
   <!--Logo-->
@@ -25,15 +30,15 @@
     </div>
   </nav>
 </header>
+          <div>
+            {{!-- materialize large buttons --}}
+            <button class="button wrapper waves-effect waves-light btn-large pink accent -3" href="/login" id="logInBtn">Log In</button>
 
-{{!-- word cloud art --}}
-<img src="/assets/images/wordCloudBlack.jpg"alt="Word Cloud" class="center">
+            <button class="button wrapper waves-effect waves-light btn-large pink accent -3" href="/signup" id="signUpBtn">Sign Up</button>
 
-{{!-- materialize large button Log in--}}
-
-<div>
-{{!-- materialize large button Sign up--}}
-<button class="button wrapper waves-effect waves-light btn-large pink accent -3" href="/login" id="logInBtn">Log In</button>
-
-<button class="button wrapper waves-effect waves-light btn-large pink accent -3" href="/signup" id="signUpBtn">Sign Up</button>
-</div>
+            <button class="button wrapper waves-effect waves-light btn-large pink accent -3" href="/logout" id="logOutBtn">Log Out</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

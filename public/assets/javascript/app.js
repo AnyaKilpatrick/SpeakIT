@@ -4,17 +4,15 @@
 //   var instances = M.Datepicker.init(elems, options);
 // });
 
-// materialize dropdown for choosing flag of native language
-$('.dropdown-trigger').dropdown();
+// Or with jQuery
 
-// array of flag art to replace user input of native language choice
-// for loop to loop through array of flag options
-var app = require("express")();
-var http = require('http').Server(app);
-var io = require('socket.io')(http);
-io.on('connection', function(socket){
-    console.log('a user connected!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
-    socket.on('chat message', function(msg){
-      io.emit('chat message', msg);
-    });
-  });
+// $(document).ready(function () {
+//   $('.datepicker').datepicker();
+// });
+
+// materialize dropdown for choosing flag of native language
+$('.dropdown-trigger').on("click", function(){
+  console.log("I am clicking");
+  $(this).dropdown();
+});
+console.log("sanity")
