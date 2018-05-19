@@ -149,7 +149,15 @@ module.exports = function(app){
         console.log("you are not authenticated");
         res.redirect('/');
     }
-}
+
+    app.get("/chat", function(req, res){
+        res.render("chat");
+    })
+
+    // app.get("/languagechoice/:language", function(req, res){
+    //     var language = req.params.language;
+    //     db.User 
+    // }
 
 // module.exports = router;
 
