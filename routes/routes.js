@@ -3,6 +3,8 @@ var db = require("../models");
 var app = express();
 var passport = require("passport");
 require("../config/passport")(passport);
+var language
+// var language
 // var router = express.Router();
 
 // module.exports = routes;
@@ -83,9 +85,45 @@ module.exports = function(app){
     //         res.status(200).end();
     //     })
     // })
-    app.get("/language", function(req, res){
-        res.render("language");
+    //grabs the language value from the profile page and saves it to the language global variable
+    app.post("/languagesearch", function(req, res){
+        console.log("Test2"+req.body.language);
+        language = req.body.language;
+        // console.log(JSON.stringify(object))
+        // res.render("language", object);
+        res.redirect("language");
     })
+    
+
+    // app.get("/languagechoice/:language", function(req, res){
+    //     language = req.params.language;
+    //     db.User 
+    // })
+    //will return values to the users in the database that match the language search critera; need to merge this with the languagesearch post route
+    app.get("/language", isLoggedIn, function(req, res){
+        db.User.findAll({
+            where: {language: language}
+        }).then(function(results){
+            var object = {
+                users: results
+            }
+            res.render("language", object);
+            console.log(JSON.stringify(object.users))
+        })
+    })
+
+
+    // app.get("/language", function(req, res){
+    //     db.User.findAll({
+    //         where: {language: language}
+    //     }).then(function(results){
+    //         var object = {
+    //             users: results
+    //         }
+    //         res.render("language", object);
+    //         console.log(JSON.stringify(object.users))
+    //     })
+    // })
     //Post (new connection)
     app.post("/language/:id", function(req, res){
         db.Connection.create({
@@ -118,7 +156,15 @@ module.exports = function(app){
         console.log("you are not authenticated");
         res.redirect('/');
     }
-}
+
+    app.get("/chat", function(req, res){
+        res.render("chat");
+    })
+
+    // app.get("/languagechoice/:language", function(req, res){
+    //     var language = req.params.language;
+    //     db.User 
+    // }
 
 // module.exports = router;
 
