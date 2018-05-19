@@ -42,8 +42,10 @@ app.use(flash()); // use connect-flash for flash messages stored in session
 
 require('./routes/routes.js')(app, passport); // load our routes and pass in our app and fully configured passport
 
+var server = require('http').Server(app);
+
 db.sequelize.sync({ force: false }).then(function() {
-    app.listen(PORT, function() {
+    server.listen(PORT, function() {
       console.log("App listening on PORT " + PORT);
     });
 });
@@ -52,11 +54,11 @@ db.sequelize.sync({ force: false }).then(function() {
 
 
 
-// var http = require('http').Server(app);
-// var io = require('socket.io')(http);
-// io.on('connection', function(socket){
-//     console.log('a user connected!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
-//     socket.on('chat message', function(msg){
-//       io.emit('chat message', msg);
-//     });
-// });
+
+var io = require('socket.io')(server);
+io.on('connection', function(socket){
+    console.log('a user connected!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
+    socket.on('chat message', function(msg){
+      io.emit('chat message', msg);
+    });
+});
