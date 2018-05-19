@@ -59,4 +59,4 @@ db.sequelize.sync({ force: false }).then(function() {
 //     socket.on('chat message', function(msg){
 //       io.emit('chat message', msg);
 //     });
-//   });
+// });
