@@ -1,0 +1,137 @@
+video#speakItVid{ 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    /* background: url(polina.jpg) no-repeat; */
+    /* background-size: cover;  */
+    /* opacity: ; */
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.radio-button-css{
+    display: inline horizontal;
+    position: relative !important;
+    z-index: 12;
+    opacity: 1 !important;
+    left: -2px !important;
+    font-size: 15px;
+}
+
+/* label.radio-label{
+    font-size: 15px;
+} */
+
+input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):focus:not([readonly]), input[type=password]:not(.browser-default):focus:not([readonly]), input[type=email]:not(.browser-default):focus:not([readonly]), input[type=url]:not(.browser-default):focus:not([readonly]), input[type=time]:not(.browser-default):focus:not([readonly]), input[type=date]:not(.browser-default):focus:not([readonly]), input[type=datetime]:not(.browser-default):focus:not([readonly]), input[type=datetime-local]:not(.browser-default):focus:not([readonly]), input[type=tel]:not(.browser-default):focus:not([readonly]), input[type=number]:not(.browser-default):focus:not([readonly]), input[type=search]:not(.browser-default):focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid rgb(240, 42, 181);
+    -webkit-box-shadow: 0 1px 0 0 rgb(240, 42, 181);
+    box-shadow: 0 1px 0 0 rgb(240, 42, 181);
+    /* radio: 0 1px 0 0 rgb(240, 42, 181); */
+} 
+
+body{
+    /* background-image: url("/assets/images/wordCloudBlack.jpg"); */
+    background-repeat: no-repeat;
+    background-color: #bdbdbd;
+    /* opacity: 50%; */
+}
+
+#profile.container{
+	padding-top: 75px;
+	/* opacity: ; */
+	border-radius: 25px;
+}
+
+#resultsCard{
+	position: relative;
+}
+
+#addBtn{
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+}
+
+.proCard{
+	border-radius: 25px;
+	padding-right: 20px;
+	border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-color: #f50057
+
+}
+
+.wrapper {
+    text-align: center;
+}
+
+.button {
+    position: center;
+    top: 50%;
+}
+
+.flags{
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+}
+
+.proPic{
+	height: 100px;
+	width: 100px;
+
+}
+
+ .upTop{
+	margin-bottom: 25px;
+    border-style: solid;
+    border-bottom: thin  #f50057;
+}
+
+/*This plays the video over the background of the entire page */
+video#speakItVid{ 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    /* background: url(polina.jpg) no-repeat; */
+    /* background-size: cover;  */
+    opacity: ;
+}
+
+#addFont{
+	text-decoration: underline;
+	font-family:'Love Ya Like A Sister', Cursive;
+	color: #212121;
+}
+
+h5{
+	text-decoration: underline;
+	
+
+}
+
+
+/*font-family: 'Pacifico', cursive;

@@ -1,0 +1,44 @@
+{{!-- speakIt banner art --}}
+<header>
+  <!--Logo-->
+  <div class="container">
+    <div class="col m8 offset-2 ">
+      <span>
+        <img src="assets/images/speakitv2.png" class="center-align">
+      </span>
+    </div>
+  </div>
+
+  <!--navigation bar-->
+  <nav>
+    <div class="nav-wrapper grey darken-1">
+      <a href="#!" class="brand-logo center"></a>
+      <ul class="left hide-on-med-and-down">
+        <li>
+          <a href="/">Home</a>
+        </li>
+        <li>
+          <a href="">Profile</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+<main>
+  <div class="row">
+
+    <div class="row">
+      <form action="/login" method="post" class="col s6 offset-s3 center-align">
+      <div class="input-field col m6 newUserForm">
+        <input name="username" userName="userName" id="newUserName" type="text" class="validate">
+        <label class="pink-text text-accent -3" for="userName">User Name</label>
+      </div>
+      <div class="input-field col s6 newUserForm">
+        <input name="password" id="newUserPassword" type="password" class="validate">
+        <label class="pink-text text-accent -3" for="password">Password</label>
+      </div>
+        <!--materialize large button Sign up submit button-->
+        <button id="logInUser" class="waves-effect waves-light btn-large pink accent-3 left-align">Login</button>
+      </form>
+    </div>
+</main>
