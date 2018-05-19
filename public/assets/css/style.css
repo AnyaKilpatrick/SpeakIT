@@ -133,5 +133,14 @@ h5{
 
 }
 
-
+#profileContent{
+    margin-top:30px;
+}
+#aboutMeDiv {
+    background:rgba(255, 255, 255, 0.267);
+    border-radius: 20px;
+}
+.addTopMargin {
+    margin-top: 10px;
+}
 /*font-family: 'Pacifico', cursive;
