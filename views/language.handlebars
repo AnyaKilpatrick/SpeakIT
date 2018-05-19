@@ -24,22 +24,24 @@
 <main>
 
 <!--this is the card that will display the results of the users that speak a certain language-->
+{{#each users}}
 <div class="card grey darken-1 z-depth-2 hoverable">
     <!--div class="card-image waves-effect waves-block waves-light"-->
       <img class="flags" src="assets/images/flag-of-Ukraine.png">
     <!--/div-->
     <div class="card-content white-text" id="resultsCard">
-      <span class="card-title activator white-text">title<i class="material-icons right pink-text text-accent-3">more_vert</i></span>
-      <p><!--User language--></p>
+      <span class="card-title activator white-text">{{username}}<i class="material-icons right pink-text text-accent-3">more_vert</i></span>
+      <p>{{language}}</p>
       <a class="btn-floating btn-large waves-effect waves pink accent-3" id="addBtn"><i class="material-icons right">add</i></a>
     </div>
     <div class="card-reveal grey lighten-1">
       <span class="card-title grey-text text-darken-4"><!--Username--><i class="material-icons right pink-text text-accent-3">close</i></span>
-     <p><!--The "about me" information of the user.--></p>
+     <p>{{about}}</p>
     </div>
     
   </div>
 </main>
+{{/each}}
 
 
 <!--This is a footer ;)-->
