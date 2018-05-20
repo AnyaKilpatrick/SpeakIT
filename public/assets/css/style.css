@@ -1,3 +1,36 @@
+/* Styling Logo*/
+#logoDiv {
+    background: #ecebe9;
+}
+.logophoto {
+    padding-bottom:0px;
+    margin-bottom:-10px;
+    height:150px;
+    width:auto;
+}
+.logophoto2 {
+    height:140px;
+    width:auto; 
+}
+
+#logInBtn, #signUpBtn, #logOutBtn{
+    margin-left: 10px;
+    margin-top:5px;
+    margin-right: 10px;
+}
+
+#noPadding1, #noPadding2, #noPadding3{
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    margin-bottom:0px;
+}
+
+#noBottomMargin {
+    margin-bottom: 0px;
+}
+
+/* Inserting Backgtound Video */
 video#speakItVid{ 
     position: fixed;
     top: 50%;
@@ -11,11 +44,10 @@ video#speakItVid{
     -moz-transform: translateX(-50%) translateY(-50%);
     -webkit-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
-    /* background: url(polina.jpg) no-repeat; */
-    /* background-size: cover;  */
     /* opacity: ; */
 }
 
+/* Styling Form */
 .center {
     display: block;
     margin-left: auto;
@@ -103,7 +135,7 @@ body{
 }
 
 /*This plays the video over the background of the entire page */
-video#speakItVid{ 
+video#speakItVid{
     position: fixed;
     top: 50%;
     left: 50%;
@@ -118,7 +150,7 @@ video#speakItVid{
     transform: translateX(-50%) translateY(-50%);
     /* background: url(polina.jpg) no-repeat; */
     /* background-size: cover;  */
-    opacity: ;
+    /* opacity:  */
 }
 
 #addFont{
@@ -143,4 +175,43 @@ h5{
 .addTopMargin {
     margin-top: 10px;
 }
-/*font-family: 'Pacifico', cursive;
+/* /*font-family: 'Pacifico', cursive; */
+
+
+/* Styling Chat Handlebars */
+#chatBox {
+    /* box-sizing:border-box; */
+    width:100%;
+    height:100%;
+    margin-left:0px;
+    padding-left:50px;
+}
+#chatForm {
+    background: #dddadaea;
+    padding: 3px;
+    position: fixed;
+    bottom: 0;
+    left:0;
+    right:0;
+    /* margin-left:auto;
+    margin-right:auto; */
+    width: 100%;
+}
+
+#messages {
+    list-style-type: none;
+    padding: 0;
+    font-size: 28px;
+    font-family: 'Concert One', cursive;
+    color: #313030;
+}
+
+
+
+/* Media Queries */
+@media (max-width: 700px) {
+    .logophoto2 {
+        height:80px;
+        width:auto; 
+    }
+}
