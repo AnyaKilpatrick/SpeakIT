@@ -34,7 +34,7 @@
     <div class="row">
       <div class="col s12 center">
         <img class="circle proPic left-align" src="assets/images/flag-of-France.png">
-        <h3 id="addFont" class="addFont">John Doe</h3>
+        <h3 id="addFont" class="addFont">{{username}}</h3>
       </div>
       <div class="col s12 center">
         <ul id = "dropdown" class = "dropdown-content">
@@ -42,12 +42,13 @@
           <li><a href = "/language">German</li>
           <li><a href = "/language">Spanish</a></li>
         </ul>
-        <a class = "btn dropdown-button" href = "#" data-activates = "dropdown" id="languagechoice">Search friends</a>
+        <a class = "btn dropdown-button pink accent-3" href = "#" data-activates = "dropdown" id="languagechoice">Search For Friends</a>
       </div>
       <div class="col s12 m5 l4 addTopMargin" id="aboutMeDiv">
         <div class="row center">
           <h5>About Me</h5>
         </div>
+
         <p class="flow-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde odit aperiam tempora quae saepe dolorum ratione vero minima eos culpa, est maiores, eum laudantium quam? Beatae voluptates nemo repudiandae, enim.</p>
       </div>
       <div class="col s12 m5 l4 offset-l4 offset-m2 addTopMargin" id="aboutMeDiv">
@@ -68,7 +69,7 @@
 
     </div>
     </div>
-    {{!-- <div class="section">
+       <div class="section">
       <div class="container flow-text proCard light white-text center-align grey darken-1 z-depth-4">
         <!--profile area-->
         <main>
@@ -97,7 +98,7 @@
 
 
 
-        <!--This is a footer ;)-->
+        
        
 
 
@@ -107,5 +108,34 @@
         
       </div>
     </div>
-  </div> --}}
+  </div>
+
+  <!--This is a footer ;)-->
+  <footer class="page-footer grey darken-1">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Developers</h5>
+                <p class="grey-text text-lighten-4">This page was created by:</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Connect With Us</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="https://www.linkedin.com/in/hanna-kilpatrick-5a6b7914b/">Anya Kilpatric</a></li>
+                  <li><a class="grey-text text-lighten-3" href="https://www.linkedin.com/in/johnny-heath/">Johnny Heath</a></li>
+                  <li><a class="grey-text text-lighten-3" href="https://www.linkedin.com/in/marieajohnson/">Mariea Johnson</a></li>
+                  <li><a class="grey-text text-lighten-3" href="https://www.linkedin.com/in/janmichaeledwards/">Jan-Michael Edwards</a></li>
+                
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2018 Copyright Text
+            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+          </div>
+        </footer>    
+
   <script>$('#dropdown-button').dropdown();</script>
