@@ -1,15 +1,57 @@
-<ul id="messages"></ul>
-<form action="">
-    <input id="m" autocomplete="off" /><button>Send</button>
-</form>
-{{!-- <script src="/socket.io/socket.io.js"></script>
+<header>
+  <div id="logoDiv">
+    <div class="row" id="noBottomMargin">
+      <div class="col s12" id="noPadding1">
+        <div class="col s1 left-align bottom-align" id="noPadding2">
+          <img src="assets/images/JanMichael.png" class="logophoto hide-on-small-only"></img>
+        </div>
+        <div class="col center-align s10">
+          <img src="assets/images/speakitlogo.png" class="logophoto2"></img>
+        </div>
+        <div class="col s1 right-align" id="noPadding3">
+          <img src="assets/images/Anya.png" class="logophoto hide-on-small-only"></img>
+        </div>   
+      </div>
+    </div>
+</div>
+  <nav> <!--navigation bar-->
+    <div class="nav-wrapper grey darken-1">
+      <a href="#!" class="brand-logo center"></a>
+      <ul class="left hide-on-med-and-down">
+        <li>
+          <a href="/">Home</a>
+        </li>
+        <li>
+          <a href="">Profile</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+<div id="chatBox">
+    <ul id="messages"></ul>
+    <div class="row center">
+        <div class="col s12">
+            <form id="chatForm">
+                <div class="input-field">
+                    <i class="material-icons prefix pink-text text-accent-3">textsms</i>
+                    <input type="text" id="msg" autocomplete="off">
+                    <label for="msg" class="pink-text text-accent-3">Message</label>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
 <script>
     
     $(function () {
-    var socket = io();
+    //var socket = io.connect("https://speak-it.herokuapp.com/");
+    var socket = io.connect("http://localhost:3000");      
     $('form').submit(function(){
-        socket.emit('chat message', $('#m').val());
-        $('#m').val('');
+        socket.emit('chat message', $('#msg').val());
+        $('#msg').val('');
         return false;
     });
     socket.on('chat message', function(msg){
@@ -17,4 +59,4 @@
         window.scrollTo(0, document.body.scrollHeight);
     });
     });
-</script> --}}
+</script>

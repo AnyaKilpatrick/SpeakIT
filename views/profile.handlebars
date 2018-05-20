@@ -1,10 +1,20 @@
 
   <header>
-    <div class="container">
-      <div class="col m8 offset-2">
-        <span><img class="center-align" src=""></span>
+  <div id="logoDiv">
+    <div class="row" id="noBottomMargin">
+      <div class="col s12" id="noPadding1">
+        <div class="col s1 left-align bottom-align" id="noPadding2">
+          <img src="assets/images/JanMichael.png" class="logophoto hide-on-small-only"></img>
+        </div>
+        <div class="col center-align s10">
+          <img src="assets/images/speakitlogo.png" class="logophoto2"></img>
+        </div>
+        <div class="col s1 right-align" id="noPadding3">
+          <img src="assets/images/Anya.png" class="logophoto hide-on-small-only"></img>
+        </div>   
       </div>
-    </div><!--Navigation Bar-->
+    </div>
+  </div>
     <nav>
       <div class="nav-wrapper sidenav-trigger grey darken-1">
         <a class="brand-logo center" href="#!"></a>
@@ -20,8 +30,45 @@
       </div>
     </nav>
   </header>
-  
-    <div class="section">
+  <div class="container" id="profileContent">  
+    <div class="row">
+      <div class="col s12 center">
+        <img class="circle proPic left-align" src="assets/images/flag-of-France.png">
+        <h3 id="addFont" class="addFont">John Doe</h3>
+      </div>
+      <div class="col s12 center">
+        <ul id = "dropdown" class = "dropdown-content">
+          <li><a href = "/language">English</li>
+          <li><a href = "/language">German</li>
+          <li><a href = "/language">Spanish</a></li>
+        </ul>
+        <a class = "btn dropdown-button" href = "#" data-activates = "dropdown" id="languagechoice">Search friends</a>
+      </div>
+      <div class="col s12 m5 l4 addTopMargin" id="aboutMeDiv">
+        <div class="row center">
+          <h5>About Me</h5>
+        </div>
+        <p class="flow-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde odit aperiam tempora quae saepe dolorum ratione vero minima eos culpa, est maiores, eum laudantium quam? Beatae voluptates nemo repudiandae, enim.</p>
+      </div>
+      <div class="col s12 m5 l4 offset-l4 offset-m2 addTopMargin" id="aboutMeDiv">
+        <div class="row center">
+          <h5>My Friends</h5>
+        </div>
+        <ul>
+          <li>
+            <a href="/chat">chat</a> with AnyaUA
+            <img class="circle" width="50px" src="assets/images/flag-of-Ukraine.png">
+          </li>
+          <li>
+            <a href="/chat">chat</a> with Jan-Michael
+            <img class="circle" width="50px" src="assets/images/flag-of-United-States-of-America.png">
+          </li>
+        </ul>
+      </div>
+
+    </div>
+    </div>
+    {{!-- <div class="section">
       <div class="container flow-text proCard light white-text center-align grey darken-1 z-depth-4">
         <!--profile area-->
         <main>
@@ -60,5 +107,5 @@
         
       </div>
     </div>
-  </div>
-  <script>$('#drop').dropdown();</script>
+  </div> --}}
+  <script>$('#dropdown-button').dropdown();</script>

@@ -108,7 +108,7 @@ module.exports = function(app){
                 users: results
             }
             res.render("language", object);
-            console.log(JSON.stringify(object.users))
+            console.log("this is the result!!"+JSON.stringify(object.users))
         })
     })
 
@@ -166,7 +166,4 @@ module.exports = function(app){
     //     db.User 
     // }
 
-// module.exports = router;
-
-
-
+}
