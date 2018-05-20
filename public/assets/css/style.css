@@ -189,6 +189,10 @@
      font-family: 'Concert One', cursive;
      color: #313030;
 }
+/*footer*/
+.footerText{
+    text-decoration: none;
+}
 /* Media Queries */
  @media (max-width: 700px) {
      .logophoto2 {
