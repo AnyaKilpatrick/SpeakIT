@@ -33,14 +33,28 @@
   <div class="container" id="profileContent">  
     <div class="row">
       <div class="col s12 center">
-        <img class="circle proPic left-align" src="assets/images/flag-of-France.png">
-        <h3 id="addFont" class="addFont">John Doe</h3>
+        <img id="profileflagimage" class="circle proPic left-align">
+        <h3 id="addFont" class="addFont">{{users.username}}</h3>
       </div>
       <div class="col s12 center">
+        {{!-- This is the backup code that has an input field and a button to search for the language; because the drop down is now working we should be good! --}}
+        {{!-- <input id="languagechoice" type="text" class="validate">
+         <button type="button" id="languagebtn" href="language">Select Language</button> --}}
         <ul id = "dropdown" class = "dropdown-content">
+          <li id="lang" class="dropdownvalue" value="English">English</li>
+          <li id="lang" class="dropdownvalue" value="German">German</li>
+          <li id="lang" class="dropdownvalue" value="Spanish">Spanish</li>
+          
+          {{!-- Attempted to include value + href, didn't work
+          <li value = "English"><a href = "/language">English</a></li>
+          <li value = "German"><a href="/language">German</a></li>
+          <li value = "Spanish"><a href="/language">Spanish</a></li> --}}
+
+          {{!-- Original code with href
           <li><a href = "/language">English</li>
           <li><a href = "/language">German</li>
-          <li><a href = "/language">Spanish</a></li>
+          <li><a href = "/language">Spanish</a></li> --}}
+
         </ul>
         <a class = "btn dropdown-button" href = "#" data-activates = "dropdown" id="languagechoice">Search friends</a>
       </div>
@@ -48,21 +62,28 @@
         <div class="row center">
           <h5>About Me</h5>
         </div>
-        <p class="flow-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde odit aperiam tempora quae saepe dolorum ratione vero minima eos culpa, est maiores, eum laudantium quam? Beatae voluptates nemo repudiandae, enim.</p>
+        <p class="flow-text">Language: {{users.language}}</p>
+        <p class="flow-text">Gender: {{users.gender}}</p>
+        <p class="flow-text">Age: {{users.age}}</p>
+        <p class="flow-text">About me: {{users.about}}</p>
       </div>
       <div class="col s12 m5 l4 offset-l4 offset-m2 addTopMargin" id="aboutMeDiv">
         <div class="row center">
           <h5>My Friends</h5>
         </div>
         <ul>
+          {{!-- This returns the username of each user that the logged in user is connected with --}}
+          {{#each friends}}
           <li>
-            <a href="/chat">chat</a> with AnyaUA
-            <img class="circle" width="50px" src="assets/images/flag-of-Ukraine.png">
+            <a href="/chat">chat</a> with {{requestee}}
+            {{!-- Commenting this out because we're not returning any information beyond the connected user's username --}}
+            {{!-- <img class="circle" width="50px" src="assets/images/flag-of-Ukraine.png"> --}}
           </li>
-          <li>
+          {{!-- <li>
             <a href="/chat">chat</a> with Jan-Michael
             <img class="circle" width="50px" src="assets/images/flag-of-United-States-of-America.png">
-          </li>
+          </li> --}}
+          {{/each}}
         </ul>
       </div>
 
