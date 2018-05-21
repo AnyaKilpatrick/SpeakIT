@@ -33,42 +33,63 @@
   <div class="container" id="profileContent">  
     <div class="row">
       <div class="col s12 center">
-        <img class="circle proPic left-align" src="assets/images/flag-of-France.png">
-        <h3 id="addFont" class="addFont">John Doe</h3>
+        <img id="profileflagimage" class="circle proPic left-align">
+        <h3 id="addFont" class="addFont">{{users.username}}</h3>
       </div>
       <div class="col s12 center">
-        <ul id = "dropdown" class = "dropdown-content">
+        {{!-- This is the backup code that has an input field and a button to search for the language; because the drop down is now working we should be good! --}}
+        {{!-- <input id="languagechoice" type="text" class="validate">
+         <button type="button" id="languagebtn" href="language">Select Language</button> --}}
+        <ul id = "dropdown" class = "pink accent-3 dropdown-content">
+          <li id="lang" class="dropdownvalue" value="English">English</li>
+          <li id="lang" class="dropdownvalue" value="German">German</li>
+          <li id="lang" class="dropdownvalue" value="Spanish">Spanish</li>
+          
+          {{!-- Attempted to include value + href, didn't work
+          <li value = "English"><a href = "/language">English</a></li>
+          <li value = "German"><a href="/language">German</a></li>
+          <li value = "Spanish"><a href="/language">Spanish</a></li> --}}
+
+          {{!-- Original code with href
           <li><a href = "/language">English</li>
           <li><a href = "/language">German</li>
-          <li><a href = "/language">Spanish</a></li>
+          <li><a href = "/language">Spanish</a></li> --}}
+
         </ul>
-        <a class = "btn dropdown-button" href = "#" data-activates = "dropdown" id="languagechoice">Search friends</a>
+        <a class = "btn dropdown-button pink accent-3" href = "#" data-activates = "dropdown" id="languagechoice">Search For Friends</a>
       </div>
       <div class="col s12 m5 l4 addTopMargin" id="aboutMeDiv">
         <div class="row center">
           <h5>About Me</h5>
         </div>
-        <p class="flow-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde odit aperiam tempora quae saepe dolorum ratione vero minima eos culpa, est maiores, eum laudantium quam? Beatae voluptates nemo repudiandae, enim.</p>
+        <p class="flow-text">Language: {{users.language}}</p>
+        <p class="flow-text">Gender: {{users.gender}}</p>
+        <p class="flow-text">Age: {{users.age}}</p>
+        <p class="flow-text">About me: {{users.about}}</p>
       </div>
       <div class="col s12 m5 l4 offset-l4 offset-m2 addTopMargin" id="aboutMeDiv">
         <div class="row center">
           <h5>My Friends</h5>
         </div>
         <ul>
+          {{!-- This returns the username of each user that the logged in user is connected with --}}
+          {{#each friends}}
           <li>
-            <a href="/chat">chat</a> with AnyaUA
-            <img class="circle" width="50px" src="assets/images/flag-of-Ukraine.png">
+            <a href="/chat">chat</a> with {{requestee}}
+            {{!-- Commenting this out because we're not returning any information beyond the connected user's username --}}
+            {{!-- <img class="circle" width="50px" src="assets/images/flag-of-Ukraine.png"> --}}
           </li>
-          <li>
+          {{!-- <li>
             <a href="/chat">chat</a> with Jan-Michael
             <img class="circle" width="50px" src="assets/images/flag-of-United-States-of-America.png">
-          </li>
+          </li> --}}
+          {{/each}}
         </ul>
       </div>
 
     </div>
     </div>
-    {{!-- <div class="section">
+       <div class="section">
       <div class="container flow-text proCard light white-text center-align grey darken-1 z-depth-4">
         <!--profile area-->
         <main>
@@ -97,7 +118,7 @@
 
 
 
-        <!--This is a footer ;)-->
+        
        
 
 
@@ -107,5 +128,40 @@
         
       </div>
     </div>
-  </div> --}}
+  </div>
+
+  <!--This is a footer ;)-->
+  <footer class="page-footer grey darken-1">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class=" footerText white-text">This Page Was Created By:</h5>
+                
+                 <ul>
+                  <li><a class="grey-text text-lighten-3" href="https://www.linkedin.com/in/hanna-kilpatrick-5a6b7914b/">Anya Kilpatrick</a></li>
+                  <li><a class="grey-text text-lighten-3" href="https://www.linkedin.com/in/johnny-heath/">Johnny Heath</a></li>
+                  <li><a class="grey-text text-lighten-3" href="https://www.linkedin.com/in/marieajohnson/">Mariea Johnson</a></li>
+                  <li><a class="grey-text text-lighten-3" href="https://www.linkedin.com/in/janmichaeledwards/">Jan-Michael Edwards</a></li>
+                
+                </ul>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class=" footerText white-text">Connect With Us</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="https://www.linkedin.com/in/hanna-kilpatrick-5a6b7914b/">LinkedIn</a></li>
+                  <li><a class="grey-text text-lighten-3" href="https://www.linkedin.com/in/johnny-heath/">LinkedIn</a></li>
+                  <li><a class="grey-text text-lighten-3" href="https://www.linkedin.com/in/marieajohnson/">LinkedIn</a></li>
+                  <li><a class="grey-text text-lighten-3" href="https://www.linkedin.com/in/janmichaeledwards/">LinkedIn</a></li>
+                
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2018 Copyright Text
+            </div>
+          </div>
+        </footer>    
+
   <script>$('#dropdown-button').dropdown();</script>
