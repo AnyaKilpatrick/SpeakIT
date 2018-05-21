@@ -1,9 +1,14 @@
+//This event handler looks for a button click of the addBtn class and passes that value to the newConnection object so it can be passed as the requstee for a new connection record in the Connections table
 $(document).ready(function() {
-    $("#connect").on("click", function(event){
+    $(".addBtn").on("click", function(event){
         event.preventDefault();
+        console.log($(this).attr("value"));
         var newConnection = {
-            //need to define what data we're passing here; s/b id of user from div on language.handlebars page
+            requesteeUN: $(this).attr("value"),
+            requesteeLang: $(this).data("lang")
         }
+        console.log(newConnection.requesteeUN);
+        console.log(newConnection.requesteeLang);
         $.ajax("/newconnection", {
             type: "POST",
             data:newConnection

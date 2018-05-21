@@ -4,6 +4,8 @@ var app = express();
 var passport = require("passport");
 require("../config/passport")(passport);
 var language
+var userLoggedIn
+var userFriends
 // var language
 // var router = express.Router();
 
@@ -47,100 +49,57 @@ module.exports = function(app){
         // failureFlash : true // allow flash messages
     }));
 
-    // app.post("/newprofile", function(req, res){    
-    //     console.log(req.body);
-    //     db.User.sync().then(function(){
-    //         db.User.count({ where: {username: req.body.name}}).then(function(count){
-    //         if (count != 0) {
-    //             console.log('User already exists')
-    //         } else {
-    //             console.log('Creating user...')
-                
-    //             db.User.create({
-    //                     user_name: req.body.name,
-    //                     password: req.body.password,
-    //                     language: req.body.language,
-    //                     gender: req.body.gender,
-    //                     age: req.body.age,
-    //                     about: req.body.about
-    //                 }).then(function(){
-    //                     console.log("new use was added successfully");
-    //                     res.status(200).end();
-    //                 })
-    //             }
-    //         })
-    //     })    
-    // });
-
-    // router.post("/loginrequest", function(req, res){
-    //     console.log("it's logging  a user");
-    //     console.log("it's passing info!!!  "+JSON.stringify(req.body));
-    //     db.User.findAll({
-    //         where: {
-    //             user_name: req.body.user_name,
-    //             password: req.body.password
-    //         }
-    //     }).then(function(results){
-    //         console.log(results);
-    //         res.status(200).end();
-    //     })
-    // })
-    //grabs the language value from the profile page and saves it to the language global variable
+    //This route grabs the language search value from the profile page and saves it to the language global variable to be used in the /language route then redirects to the language.handlebars page
     app.post("/languagesearch", function(req, res){
         console.log("Test2"+req.body.language);
         language = req.body.language;
-        // console.log(JSON.stringify(object))
-        // res.render("language", object);
         res.redirect("language");
     })
     
-
-    // app.get("/languagechoice/:language", function(req, res){
-    //     language = req.params.language;
-    //     db.User 
-    // })
-    //will return values to the users in the database that match the language search critera; need to merge this with the languagesearch post route
+    //This returns all users who match the language search criteria entered on the profile page, then passes those users to the language.handlebars page so they call all be rendered
     app.get("/language", isLoggedIn, function(req, res){
+        console.log("This is the user who is logged in "+req.user.username)
+        //Query to locate the users who speak the language selected on the profile page
         db.User.findAll({
             where: {language: language}
         }).then(function(results){
             var object = {
                 users: results
             }
+            //Returning the list of users returned from the query to the language.handlebars file
             res.render("language", object);
             console.log("this is the result!!"+JSON.stringify(object.users))
         })
     })
 
-
-    // app.get("/language", function(req, res){
-    //     db.User.findAll({
-    //         where: {language: language}
-    //     }).then(function(results){
-    //         var object = {
-    //             users: results
-    //         }
-    //         res.render("language", object);
-    //         console.log(JSON.stringify(object.users))
-    //     })
-    // })
-    //Post (new connection)
-    app.post("/language/:id", function(req, res){
-        db.Connection.create({
-            //need to pass data taken from the language.handlebars page (id of user currently logged in and id of user in div that the current user selects and pass it to the Connection model here
-        }).then(function(){
-            console.log("new connection established")
-        })
-    });
-
-
     // we will want profile protected so you have to be logged in to visit
     // we will use route middleware to verify this (the isLoggedIn function)
+    //This route confirms the logged in user then passes the logged in user's and all of the users they're connected to back to the profile page so they can be displayed
     app.get("/profile", isLoggedIn, function(req, res) {
         console.log("readu to go to profile...!!");
         console.log("req.user "+req.user.username + req.user.password);
-        res.render("profile");
+        console.log(req.user.language);
+        //Grabbing the info of the logged in user and passing to a global variable to be used in the connection route
+        userLoggedIn = req.user.username;
+        //Query into the Connections table to return all the users that the logged in user is connected with and then returning that info to the profile.handlebars page to be displayed
+        db.Connection.findAll({
+            where: {requestor: req.user.username}
+        }).then(function(results){
+            var currentUser = {
+                users: req.user,
+                friends: results
+            }
+            console.log("These are my friends: "+JSON.stringify(currentUser.friends));
+            res.render("profile", currentUser);
+        })
     });
+
+    app.get("/chat", isLoggedIn, function(req, res){
+        res.render("chat");
+    })
+
+
+
     app.get('/logout', function(req, res) {
         req.logout();
         res.redirect('/');
@@ -157,13 +116,14 @@ module.exports = function(app){
         res.redirect('/');
     }
 
-    app.get("/chat", function(req, res){
-        res.render("chat");
+    //This route creates a new connection when the user clicks the connection button on the languages.handlebars page by creating a record in the Connections table using the logged in user as the requestor and the user whose div the button was in as the requestee
+    app.post("/newconnection", function(req, res){
+        console.log(req.body.requesteeUN)
+        db.Connection.create({
+            requestee: req.body.requesteeUN,
+            requesteeLang: req.body.requesteeLang,
+            requestor: userLoggedIn
+        })
     })
-
-    // app.get("/languagechoice/:language", function(req, res){
-    //     var language = req.params.language;
-    //     db.User 
-    // }
 
 }

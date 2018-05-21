@@ -2,19 +2,28 @@
 
  <header>
     <!--Logo-->
-        <div class="container">
-            <div class="col m8 offset-2 ">
-            <span><img src="/assets/images/speakitLogo.png" class= "center-align"></img></span>
-            </div>   
-        </div>  
-
+  <div id="logoDiv">
+    <div class="row" id="noBottomMargin">
+      <div class="col s12" id="noPadding1">
+        <div class="col s1 left-align bottom-align" id="noPadding2">
+          <img src="assets/images/JanMichael.png" class="logophoto hide-on-small-only"></img>
+        </div>
+        <div class="col center-align s10">
+          <img src="assets/images/speakitlogo.png" class="logophoto2"></img>
+        </div>
+        <div class="col s1 right-align" id="noPadding3">
+          <img src="assets/images/Anya.png" class="logophoto hide-on-small-only"></img>
+        </div>   
+      </div>
+    </div>
+  </div>
     <!--navigation bar-->      
         <nav>
             <div class="nav-wrapper grey darken-1">
                 <a href="#!" class="brand-logo center"></a>
                 <ul class="left hide-on-med-and-down">
                     <li><a href="/">Home</a></li>
-                    <li><a href="">Profile</a></li>
+                    <li><a href="/profile">Profile</a></li>
                     
                 </ul>
             </div>
@@ -27,16 +36,17 @@
 {{#each users}}
 <div class="card grey darken-1 z-depth-2 hoverable">
     <!--div class="card-image waves-effect waves-block waves-light"-->
-      <img class="flags" src="assets/images/flag-of-Ukraine.png">
+      <img class="userlistImg flags" data-lang="{{language}}" src="#">
     <!--/div-->
     <div class="card-content white-text" id="resultsCard">
       <span class="card-title activator white-text">{{username}}<i class="material-icons right pink-text text-accent-3">more_vert</i></span>
       <p>{{language}}</p>
-      <a class="btn-floating btn-large waves-effect waves pink accent-3" id="addBtn"><i class="material-icons right">add</i></a>
+      <a class="addBtn btn-floating btn-large waves-effect waves pink accent-3" id="addBtn" data-lang={{language}} value={{username}}><i class="material-icons right">add</i></a>
     </div>
     <div class="card-reveal grey lighten-1">
       <span class="card-title grey-text text-darken-4"><!--Username--><i class="material-icons right pink-text text-accent-3">close</i></span>
-     <p>{{about}}</p>
+      <p><img src="assets/images/{{gender}}.png" style="width:30px">I am {{age}} year old.</p>
+      <p>{{about}}</p>
     </div>
     
   </div>
@@ -46,26 +56,34 @@
 
 <!--This is a footer ;)-->
 <footer class="page-footer grey darken-1">
-          <div class="container">
-            <div class="row">
-              <div class="col l6 s12">
-                <h5 class="white-text">Footer Content</h5>
-                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
-              </div>
-              <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">Links</h5>
-                <ul>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-                
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="footer-copyright">
-            <div class="container">
-            © 2018 Copyright Text
-            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
-            </div>
-          </div>
-        </footer>    
+  <div class="container">
+    <div class="row">
+      <div class="col l6 s12">
+        <h5 class="white-text">This Page Was Created By:</h5>
+        
+        <ul>
+          <li><a class="grey-text text-lighten-3" href="https://www.linkedin.com/in/hanna-kilpatrick-5a6b7914b/">Anya Kilpatrick</a></li>
+          <li><a class="grey-text text-lighten-3" href="https://www.linkedin.com/in/johnny-heath/">Johnny Heath</a></li>
+          <li><a class="grey-text text-lighten-3" href="https://www.linkedin.com/in/marieajohnson/">Mariea Johnson</a></li>
+          <li><a class="grey-text text-lighten-3" href="https://www.linkedin.com/in/janmichaeledwards/">Jan-Michael Edwards</a></li>
+        
+        </ul>
+      </div>
+      <div class="col l4 offset-l2 s12">
+        <h5 class="white-text">Connect With Us</h5>
+        <ul>
+          <li><a class="grey-text text-lighten-3" href="https://www.linkedin.com/in/hanna-kilpatrick-5a6b7914b/">LinkedIn</a></li>
+          <li><a class="grey-text text-lighten-3" href="https://www.linkedin.com/in/johnny-heath/">LinkedIn</a></li>
+          <li><a class="grey-text text-lighten-3" href="https://www.linkedin.com/in/marieajohnson/">LinkedIn</a></li>
+          <li><a class="grey-text text-lighten-3" href="https://www.linkedin.com/in/janmichaeledwards/">LinkedIn</a></li>
+        
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <div class="container">
+    © 2018 Copyright Text
+    </div>
+  </div>
+</footer>    
