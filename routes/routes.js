@@ -94,6 +94,10 @@ module.exports = function(app){
         })
     });
 
+    app.get("/chat", isLoggedIn, function(req, res){
+        res.render("chat");
+    })
+
 
 
     app.get('/logout', function(req, res) {
@@ -112,15 +116,12 @@ module.exports = function(app){
         res.redirect('/');
     }
 
-    app.get("/chat", function(req, res){
-        res.render("chat");
-    })
-
     //This route creates a new connection when the user clicks the connection button on the languages.handlebars page by creating a record in the Connections table using the logged in user as the requestor and the user whose div the button was in as the requestee
     app.post("/newconnection", function(req, res){
         console.log(req.body.requesteeUN)
         db.Connection.create({
             requestee: req.body.requesteeUN,
+            requesteeLang: req.body.requesteeLang,
             requestor: userLoggedIn
         })
     })

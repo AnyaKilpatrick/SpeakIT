@@ -4,9 +4,11 @@ $(document).ready(function() {
         event.preventDefault();
         console.log($(this).attr("value"));
         var newConnection = {
-            requesteeUN: $(this).attr("value")
+            requesteeUN: $(this).attr("value"),
+            requesteeLang: $(this).data("lang")
         }
         console.log(newConnection.requesteeUN);
+        console.log(newConnection.requesteeLang);
         $.ajax("/newconnection", {
             type: "POST",
             data:newConnection

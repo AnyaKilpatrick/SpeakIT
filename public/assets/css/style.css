@@ -44,6 +44,28 @@
      */
 }
 /* Styling Form */
+.signup-card{
+    border-radius: 25px;
+}
+input[type=text]:focus{
+    border-bottom: 2px solid #f50057;
+}
+
+input[type=password]:focus{
+    border-bottom: 2px solid #f50057;
+}
+
+.age-input{
+    width: 75px;
+    height: 30px;
+    background-color: rgb(201, 199, 199);
+}
+#langOption {
+    color: #f50057;
+}
+input[type=age]:focus{
+    outline: 2px solid #f50057;
+}
  .center {
      display: block;
      margin-left: auto;
@@ -51,24 +73,43 @@
      width: 100%;
 }
  .radio-button-css{
-     display: inline horizontal;
-     position: relative !important;
-     z-index: 12;
-     opacity: 1 !important;
-     left: -2px !important;
-     font-size: 15px;
+    display: inline horizontal;
+    position: relative !important;
+    z-index: 12;
+    color: rgb(201, 199, 199);
+    opacity: 1 !important;
+    left: -2px !important;
+    margin: 15px;
+    padding: 5px;
 }
 /* label.radio-label{
      font-size: 15px;
 }
  */
- input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):focus:not([readonly]), input[type=password]:not(.browser-default):focus:not([readonly]), input[type=email]:not(.browser-default):focus:not([readonly]), input[type=url]:not(.browser-default):focus:not([readonly]), input[type=time]:not(.browser-default):focus:not([readonly]), input[type=date]:not(.browser-default):focus:not([readonly]), input[type=datetime]:not(.browser-default):focus:not([readonly]), input[type=datetime-local]:not(.browser-default):focus:not([readonly]), input[type=tel]:not(.browser-default):focus:not([readonly]), input[type=number]:not(.browser-default):focus:not([readonly]), input[type=search]:not(.browser-default):focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
-     border-bottom: 1px solid rgb(240, 42, 181);
-     -webkit-box-shadow: 0 1px 0 0 rgb(240, 42, 181);
-     box-shadow: 0 1px 0 0 rgb(240, 42, 181);
-    /* radio: 0 1px 0 0 rgb(240, 42, 181);
-     */
+ input[type=radio]:checked ~ .checkmark:after {
+    display: block;
+    background-color: #f50057;
 }
+ .dropdown-button{
+    width: 235px;
+    position: center;
+}
+ .dropdown-content{
+    width: 235px;
+}
+ .about-me-input{
+    text-align: top;
+    background-color: rgb(201, 199, 199)
+}
+ input[type=aboutMe]:focus{
+    outline: 2px solid #f50057;
+}
+ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):focus:not([readonly]), input[type=password]:not(.browser-default):focus:not([readonly]), input[type=email]:not(.browser-default):focus:not([readonly]), input[type=url]:not(.browser-default):focus:not([readonly]), input[type=time]:not(.browser-default):focus:not([readonly]), input[type=date]:not(.browser-default):focus:not([readonly]), input[type=datetime]:not(.browser-default):focus:not([readonly]), input[type=datetime-local]:not(.browser-default):focus:not([readonly]), input[type=tel]:not(.browser-default):focus:not([readonly]), input[type=number]:not(.browser-default):focus:not([readonly]), input[type=search]:not(.browser-default):focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid  #f50057;
+    -webkit-box-shadow: 0 1px 0 0  #f50057;
+    box-shadow: 0 1px 0 0  #f50057;
+    border-color: 0 1px 0 0  #f50057;
+} 
  body{
     /* background-image: url("/assets/images/wordCloudBlack.jpg");
      */
@@ -109,6 +150,9 @@
  .button {
      position: center;
      top: 50%;
+}
+.chatLink{
+    color: #f50057;
 }
  .flags{
      height: 50px;
