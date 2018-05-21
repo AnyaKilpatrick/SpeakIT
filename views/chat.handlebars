@@ -45,8 +45,8 @@
 <script src="/socket.io/socket.io.js"></script>
 <script>
   $(function () {
-    //var socket = io.connect("https://speak-it.herokuapp.com/");
-    var socket = io.connect("http://localhost:3000");      
+    var socket = io.connect("https://speak-it.herokuapp.com/");
+    //var socket = io.connect("http://localhost:3000");      
     $('form').submit(function(){
         socket.emit('chat message', $('#msg').val());
         $('#msg').val('');
