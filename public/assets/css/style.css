@@ -1,217 +1,202 @@
 /* Styling Logo*/
-#logoDiv {
-    background: #ecebe9;
+ #logoDiv {
+     background: #ecebe9;
 }
-.logophoto {
-    padding-bottom:0px;
-    margin-bottom:-10px;
-    height:150px;
-    width:auto;
+ .logophoto {
+     padding-bottom:0px;
+     margin-bottom:-10px;
+     height:150px;
+     width:auto;
 }
-.logophoto2 {
-    height:140px;
-    width:auto; 
+ .logophoto2 {
+     height:140px;
+     width:auto;
 }
-
-#logInBtn, #signUpBtn, #logOutBtn{
-    margin-left: 10px;
-    margin-top:5px;
-    margin-right: 10px;
+ #logInBtn, #signUpBtn, #logOutBtn{
+     margin-left: 10px;
+     margin-top:5px;
+     margin-right: 10px;
 }
-
-#noPadding1, #noPadding2, #noPadding3{
-    padding-left: 0px;
-    padding-right: 0px;
-    padding-bottom: 0px;
-    margin-bottom:0px;
+ #noPadding1, #noPadding2, #noPadding3{
+     padding-left: 0px;
+     padding-right: 0px;
+     padding-bottom: 0px;
+     margin-bottom:0px;
 }
-
-#noBottomMargin {
-    margin-bottom: 0px;
+ #noBottomMargin {
+     margin-bottom: 0px;
 }
-
 /* Inserting Backgtound Video */
-video#speakItVid{ 
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -100;
-    -ms-transform: translateX(-50%) translateY(-50%);
-    -moz-transform: translateX(-50%) translateY(-50%);
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
-    /* opacity: ; */
+ video#speakItVid{
+     position: fixed;
+     top: 50%;
+     left: 50%;
+     min-width: 100%;
+     min-height: 100%;
+     width: auto;
+     height: auto;
+     z-index: -100;
+     -ms-transform: translateX(-50%) translateY(-50%);
+     -moz-transform: translateX(-50%) translateY(-50%);
+     -webkit-transform: translateX(-50%) translateY(-50%);
+     transform: translateX(-50%) translateY(-50%);
+    /* opacity: ;
+     */
 }
-
 /* Styling Form */
-.center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
+ .center {
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+     width: 100%;
 }
-
-.radio-button-css{
-    display: inline horizontal;
-    position: relative !important;
-    z-index: 12;
-    opacity: 1 !important;
-    left: -2px !important;
-    font-size: 15px;
+ .radio-button-css{
+     display: inline horizontal;
+     position: relative !important;
+     z-index: 12;
+     opacity: 1 !important;
+     left: -2px !important;
+     font-size: 15px;
 }
-
 /* label.radio-label{
-    font-size: 15px;
-} */
-
-input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):focus:not([readonly]), input[type=password]:not(.browser-default):focus:not([readonly]), input[type=email]:not(.browser-default):focus:not([readonly]), input[type=url]:not(.browser-default):focus:not([readonly]), input[type=time]:not(.browser-default):focus:not([readonly]), input[type=date]:not(.browser-default):focus:not([readonly]), input[type=datetime]:not(.browser-default):focus:not([readonly]), input[type=datetime-local]:not(.browser-default):focus:not([readonly]), input[type=tel]:not(.browser-default):focus:not([readonly]), input[type=number]:not(.browser-default):focus:not([readonly]), input[type=search]:not(.browser-default):focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
-    border-bottom: 1px solid rgb(240, 42, 181);
-    -webkit-box-shadow: 0 1px 0 0 rgb(240, 42, 181);
-    box-shadow: 0 1px 0 0 rgb(240, 42, 181);
-    /* radio: 0 1px 0 0 rgb(240, 42, 181); */
-} 
-
-body{
-    /* background-image: url("/assets/images/wordCloudBlack.jpg"); */
-    background-repeat: no-repeat;
-    background-color: #bdbdbd;
-    /* opacity: 50%; */
+     font-size: 15px;
 }
-
-#profile.container{
-	padding-top: 75px;
-	/* opacity: ; */
-	border-radius: 25px;
+ */
+ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):focus:not([readonly]), input[type=password]:not(.browser-default):focus:not([readonly]), input[type=email]:not(.browser-default):focus:not([readonly]), input[type=url]:not(.browser-default):focus:not([readonly]), input[type=time]:not(.browser-default):focus:not([readonly]), input[type=date]:not(.browser-default):focus:not([readonly]), input[type=datetime]:not(.browser-default):focus:not([readonly]), input[type=datetime-local]:not(.browser-default):focus:not([readonly]), input[type=tel]:not(.browser-default):focus:not([readonly]), input[type=number]:not(.browser-default):focus:not([readonly]), input[type=search]:not(.browser-default):focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
+     border-bottom: 1px solid rgb(240, 42, 181);
+     -webkit-box-shadow: 0 1px 0 0 rgb(240, 42, 181);
+     box-shadow: 0 1px 0 0 rgb(240, 42, 181);
+    /* radio: 0 1px 0 0 rgb(240, 42, 181);
+     */
 }
-
-#resultsCard{
-	position: relative;
+ body{
+    /* background-image: url("/assets/images/wordCloudBlack.jpg");
+     */
+     background-repeat: no-repeat;
+     background-color: #bdbdbd;
+    /* opacity: 50%;
+     */
 }
-
-#addBtn{
-	position: absolute;
-	right: 10px;
-	bottom: 10px;
+/*profile*/
+ #profile.container{
+     padding-top: 75px;
+    /* opacity: ;
+     */
+     border-radius: 25px;
 }
-
-.proCard{
-	border-radius: 25px;
-	padding-right: 20px;
-	border-style: solid;
-    border-width: 1px 1px 1px 1px;
-    border-color: #f50057
-
+ .proCard{
+     border-radius: 25px;
+     padding-right: 20px;
+     border-style: solid;
+     border-width: 1px 1px 1px 1px;
+     border-color: #f50057 
 }
-
-.wrapper {
-    text-align: center;
+ .proPic{
+     height: 100px;
+     width: 100px;
 }
-
-.button {
-    position: center;
-    top: 50%;
+ #resultsCard{
+     position: relative;
 }
-
-.flags{
-	height: 50px;
-	width: 50px;
-	border-radius: 50%;
+ #addBtn{
+     position: absolute;
+     right: 10px;
+     bottom: 10px;
 }
-
-.proPic{
-	height: 100px;
-	width: 100px;
-
+ .wrapper {
+     text-align: center;
 }
-
+ .button {
+     position: center;
+     top: 50%;
+}
+ .flags{
+     height: 50px;
+     width: 50px;
+     border-radius: 50%;
+}
  .upTop{
-	margin-bottom: 25px;
-    border-style: solid;
-    border-bottom: thin  #f50057;
+     margin-bottom: 25px;
+     border-style: solid;
+     border-bottom: thin #f50057;
 }
-
 /*This plays the video over the background of the entire page */
-video#speakItVid{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -100;
-    -ms-transform: translateX(-50%) translateY(-50%);
-    -moz-transform: translateX(-50%) translateY(-50%);
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
-    /* background: url(polina.jpg) no-repeat; */
-    /* background-size: cover;  */
-    /* opacity:  */
+ video#speakItVid{
+     position: fixed;
+     top: 50%;
+     left: 50%;
+     min-width: 100%;
+     min-height: 100%;
+     width: auto;
+     height: auto;
+     z-index: -100;
+     -ms-transform: translateX(-50%) translateY(-50%);
+     -moz-transform: translateX(-50%) translateY(-50%);
+     -webkit-transform: translateX(-50%) translateY(-50%);
+     transform: translateX(-50%) translateY(-50%);
+    /* background: url(polina.jpg) no-repeat;
+     */
+    /* background-size: cover;
+     */
+    /* opacity: */
 }
-
-#addFont{
-	text-decoration: underline;
-	font-family:'Love Ya Like A Sister', Cursive;
-	color: #212121;
+ #addFont{
+     text-decoration: underline;
+     font-family:'Love Ya Like A Sister', Cursive;
+     color: #212121;
 }
-
-h5{
-	text-decoration: underline;
-	
-
+ h5{
+     text-decoration: underline;
 }
-
-#profileContent{
-    margin-top:30px;
+ #profileContent{
+     margin-top:30px;
 }
-#aboutMeDiv {
-    background:rgba(255, 255, 255, 0.267);
-    border-radius: 20px;
+ #aboutMeDiv {
+     background:rgba(255, 255, 255, 0.267);
+     border-radius: 20px;
 }
-.addTopMargin {
-    margin-top: 10px;
+ .addTopMargin {
+     margin-top: 10px;
 }
-/* /*font-family: 'Pacifico', cursive; */
-
-
+/* 
+/*font-family: 'Pacifico', cursive;
+ */
 /* Styling Chat Handlebars */
-#chatBox {
-    /* box-sizing:border-box; */
-    width:100%;
-    height:100%;
-    margin-left:0px;
-    padding-left:50px;
+ #chatBox {
+    /* box-sizing:border-box;
+     */
+     width:100%;
+     height:100%;
+     margin-left:0px;
+     padding-left:50px;
 }
-#chatForm {
-    background: #dddadaea;
-    padding: 3px;
-    position: fixed;
-    bottom: 0;
-    left:0;
-    right:0;
+ #chatForm {
+     background: #dddadaea;
+     padding: 3px;
+     position: fixed;
+     bottom: 0;
+     left:0;
+     right:0;
     /* margin-left:auto;
-    margin-right:auto; */
-    width: 100%;
+     margin-right:auto;
+     */
+     width: 100%;
 }
-
-#messages {
-    list-style-type: none;
-    padding: 0;
-    font-size: 28px;
-    font-family: 'Concert One', cursive;
-    color: #313030;
+ #messages {
+     list-style-type: none;
+     padding: 0;
+     font-size: 28px;
+     font-family: 'Concert One', cursive;
+     color: #313030;
 }
-
-
-
+/*footer*/
+.footerText{
+    text-decoration: none;
+}
 /* Media Queries */
-@media (max-width: 700px) {
-    .logophoto2 {
-        height:80px;
-        width:auto; 
+ @media (max-width: 700px) {
+     .logophoto2 {
+         height:80px;
+         width:auto;
     }
 }
