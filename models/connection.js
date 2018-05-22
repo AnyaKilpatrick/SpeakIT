@@ -7,6 +7,10 @@ module.exports = function(sequelize, DataTypes) {
         type: DataTypes.STRING,
         allowNull: false,
       },
+      requesteeLang: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
       requestor: {
         type: DataTypes.STRING,
         allowNull: false,

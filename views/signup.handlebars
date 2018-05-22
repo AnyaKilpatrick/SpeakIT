@@ -12,7 +12,7 @@
         </div>
         <div class="col s1 right-align" id="noPadding3">
           <img src="assets/images/Anya.png" class="logophoto hide-on-small-only"></img>
-        </div>   
+        </div>
       </div>
     </div>
   </div>
@@ -26,9 +26,8 @@
           <a href="/">Home</a>
         </li>
         <li>
-          <a href="">Profile</a>
+          <a href="/profile">Profile</a>
         </li>
-
       </ul>
     </div>
   </nav>
@@ -36,88 +35,72 @@
 <!--Signup Form-->
 <div class="container">
   <div class="row center">
-    <div class="col xl6 l6 m8 s10 offset-xl3 offset-l6 offset-m2 offset-s1 z-depth-4">
+    <div class="col xl6 l6 m8 s10 offset-xl3 offset-l6 offset-m2 offset-s1 z-depth-4 signup-card">
       <form action="/signup" method="post">
         <div class="row">
           <div class="col s10 offset-s1">
             <div class="row">
-              <div class="input-field col m6 offset-m3" "newUserForm">
-                <input name="username" userName="userName" id="newUserName" type="text" class="validate">
+              <div class="input-field col m6 offset-m3 newUserForm">
+                <input name="username" userName="userName" id="newUserName" type="text">
                 <label class="pink-text text-accent-3" for="userName">User Name</label>
               </div>
             </div>
             <div class="row">
-              <div class="input-field col m6 offset-m3" "newUserForm">
-                <input name="password" userName="password" id="newUserPassword" type="password" class="validate">
+              <div class="input-field col m6 offset-m3 newUserForm">
+                <input name="password" userName="password" id="newUserPassword" type="password">
                 <label class="pink-text text-accent-3" for="password">Password</label>
               </div>
             </div>
-            {{!-- container for info --}}
-            <div class="row">
-              <div class="input-field col s6 offset-s3" "newUserForm">
-
-                <!-- materialize Dropdown Trigger -->
-                <a class="dropdown-trigger btn pink accent-3" href='#' data-target='dropdown1'>Native Language...</a>
-                <!-- materialize Dropdown Structure -->
-                <ul id='dropdown1' class='dropdown-content'>
-                  <li>
-                    <a href="#!">
-                      <img src="assets/images/flag-of-France.png"></img>France</a>
-                  </li>
-                  <li>
-                    <a href="#!">
-                      <img src="assets/images/flag-of-Germany.png"></img>Germany</a>
-                  </li>
-                  <li>
-                    <a href="#!">
-                      <img src="assets/images/flag-of-Spain.png"></img>Spain</a>
-                  </li>
-                  <li>
-                    <a href="#!">
-                      <img src="assets/images/flag-of-United-Kingdom.png"></img>United Kingdom</a>
-                  </li>
-                  <li>
-                    <a href="#!">
-                      <i class="material-icons"></i>United States</a>
-                  </li>
-                </ul>
+            <div class="row center">
+              <div class="input-field col offset-m3 m6 pink-text text-accent-3">
+              <div class="select-wrapper">
+                <select name="language" class="icons" tabindex="-1">
+                  <option value="" disabled="" selected="">Where are you from?</option>
+                  <option  id="langOption" value="French" data-icon="assets/images/French.png">France</option>
+                  <option id="langOption" value="German" data-icon="assets/images/German.png">Germany</option>
+                  <option name="language" id="langOption" value="Spanish" data-icon="assets/images/Spanish.png">Spain</option>
+                  <option  id="langOption" value="Ukrainian" data-icon="assets/images/Ukrainian.png">Ukraine</option>
+                  <option  id="langOption" value="English" data-icon="assets/images/English.png">America</option>
+                </select></div>
+                <label>Native Language</label>
               </div>
             </div>
-            <div class="row">
-              <div class="input-field col s6 offset-s3" "newUserForm">
-                <input name="age" id="newUserAge" type="age" class="validate">
-                <label class="pink-text text-accent -3" for="age">Age</label>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col m12" "newUserForm">
-                <div class="gender">
-                  {{!--
-                  <input name="gender" id="newUserGender" type="gender" class="validate"> --}} {{!--
-                  <label class="pink-text text-accent-3" for="gender">Gender</label> --}}
-
-                  <!--materialize radio buttons vertical -->
-                  <label class="pink-text text-accent-3 radio-label">
-                    <input type="radio" name="editList" value="Male" class="pink-text text-accent-3 radio-button-css" />Male
-                  </label>
-                  <label class="pink-text text-accent-3 radio-label">
-                    <input type="radio" name="editList" value="Female" class="pink-text text-accent-3 radio-button-css" />Female
-                  </label>
-                  <label class="pink-text text-accent-3 radio-label">
-                    <input type="radio" name="editList" value="Other" class="pink-text text-accent-3 radio-button-css" />Other
-                  </label>
+              <br>
+              <br>
+                  {{!-- user input age field --}}
+              <div class="row">
+                <div class="input-field col s6 offset-s3 newUserForm">
+                  <input name="age" id="newUserAge" type="age" class="validate age-input">
+                  <label class="pink-text text-accent" for="age">Age</label>
                 </div>
               </div>
-            </div>
-            {{!--
-            <input type="text" class="datepicker"> --}}
-            <div class="row">
-              <div class="input-field col s12" "newUserForm">
-                <input style="height:200px;width:300px;font-size:10pt;" name="about" id="newUserAbout" type="aboutMe" class="validate" maxlength="200">
-                <label class="pink-text text-accent-3" for="aboutMe">About Me</label>
+              <div class="row">
+                <div class="col m12 newUserForm">
+                  <div class="gender">
+
+                    <!--materialize radio buttons vertical -->
+                    <label class="pink-text text-accent-3 radio-label" style= "font-size: 15px">
+                      <input type="radio" name="gender" value="Male" class= "radio-button-css" />Male
+                    </label>
+                    <label class="pink-text text-accent-3 radio-label" style= "font-size: 15px">
+                      <input type="radio" name="gender" value="Female" class="radio-button-css" />Female
+                    </label>
+                    <label class="pink-text text-accent-3 radio-label" style= "font-size: 15px">
+                      <input type="radio" name="gender" value="Other" class="radio-button-css" />Other
+                    </label>
+                  </div>
+                </div>
               </div>
-            </div>
-            <button id="logInUser" class="waves-effect waves-light btn-large pink accent-3">Submit</button>
+              <div class="row">
+                <div class="input-field col s12 newUserForm">
+                  <textarea id="newUserAbout" style="height:100px;width:300px;font-size:10pt" type="aboutMe" name="about" class="materialize-textarea"  maxlength="200"></textarea>
+                  <label class="pink-text text-accent-3" for="newUserAbout">About Me</label>
+                </div>
+              </div>
+          <button id="logInUser" class="waves-effect waves-light btn-large pink accent-3">Submit</button>
       </form>
-      </div>
+    </div>
+  </div>
+</div>
+
 
