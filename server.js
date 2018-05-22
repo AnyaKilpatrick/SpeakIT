@@ -44,18 +44,16 @@ require('./routes/routes.js')(app, passport); // load our routes and pass in our
 
 var server = require('http').Server(app);
 
-db.sequelize.sync({ force: false }).then(function() {
-    server.listen(PORT, function() {
-      console.log("App listening on PORT " + PORT);
-    });
-});
-
-
-
 var io = require('socket.io')(server);
 io.on('connection', function(socket){
     console.log('a user connected!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
     socket.on('chat message', function(msg){
       io.emit('chat message', msg);
     });
+});
+
+db.sequelize.sync({ force: false }).then(function() {
+  server.listen(PORT, function() {
+    console.log("App listening on PORT " + PORT);
+  });
 });
