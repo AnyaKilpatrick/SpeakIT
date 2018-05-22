@@ -17,10 +17,14 @@ module.exports = function(app){
     // home page
     app.get("/", function(req, res){
         console.log("home page launched");
-        db.User.findAll({}).then(function(data){
-            console.log(data);
-        })
-        res.render("index");
+        if (req.isAuthenticated()) //if user is logged in, he needs to log out to reach a home page
+        console.log("you need to log out to get to home page"),res.redirect("/profile");
+        else {
+            db.User.findAll({}).then(function(data){
+                console.log(data);
+            })
+            res.render("index");
+        }
     })
 
     // log in page
@@ -108,7 +112,7 @@ module.exports = function(app){
     // route middleware to make sure a user is logged in
     function isLoggedIn(req, res, next) {
         // if user is authenticated in the session, carry on
-        console.log("...................text from request"+req.isAuthenticated());
+        console.log("text from request"+req.isAuthenticated());
         if (req.isAuthenticated())
             return next(), console.log("you are authenticated");
         // if they aren't redirect them to the home page
