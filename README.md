@@ -1,7 +1,7 @@
 # SpeakIT
 Group Project #2
 
-Website [https://speak-it.herokuapp.com/]("https://speak-it.herokuapp.com/")
+Website [https://speak-it.herokuapp.com/](https://speak-it.herokuapp.com/);
 
 Front End Team:
 
