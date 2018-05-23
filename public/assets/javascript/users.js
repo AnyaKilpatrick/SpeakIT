@@ -34,22 +34,3 @@ $(".dropdownvalue").on("click", function(event){
 //     }
 // }
 // displayFlag();
-
-// function displayFriendFlag(){
-//     console.log("DisplayFriendFlag function is working");
-//     var lang = $(".friendFlag").data("lang");
-//     if(lang =="Ukrainian"){
-//         console.log("Ukrainian flag");
-//         $(".friendFlag").attr("src","assets/images/flag-of-Ukraine.png");
-//     }
-//     else if(lang=="Spanish"){
-//         $(".friendFlag").attr('src','assets/images/flag-of-Spain.png');
-//     }
-//     else if(lang=="English"){
-//         $(".friendFlag").attr('src','assets/images/flag-of-United-States-of-America.png');
-//     }
-//     else if(lang=="German"){
-//         $(".friendFlag").attr('src','assets/images/flag-of-Germany.png');
-//     }
-// }
-// displayFriendFlag();
